@@ -1,0 +1,12 @@
+<h1>Editing contrat</h1>
+
+<% form_for(@contrat) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contrat %> |
+<%= link_to 'Back', contrats_path %>

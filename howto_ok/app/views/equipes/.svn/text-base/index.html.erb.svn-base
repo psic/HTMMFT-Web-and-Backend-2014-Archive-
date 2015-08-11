@@ -1,0 +1,7 @@
+<h1>Listing equipes</h1>
+
+<ul>
+<% for equipe in @equipes %>
+    <li><%= link_to equipe.nom, equipe %></li>
+<% end %>
+</ul>

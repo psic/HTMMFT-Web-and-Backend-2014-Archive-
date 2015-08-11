@@ -1,0 +1,483 @@
+completeEquipe
+
+Use of uninitialized value $result_pos1[0] in concatenation (.) or string at completeEquipe.pl line 201.
+
+
+playMatch
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 149.
+Use of uninitialized value in addition (+) at playMatch.pl line 150.
+Use of uninitialized value in addition (+) at playMatch.pl line 151.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[7] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value in addition (+) at playMatch.pl line 397.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 376.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 385.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 386.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 389.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 390.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 321.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 356.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 366.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 370.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[7] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 397.
+Use of uninitialized value in addition (+) at playMatch.pl line 397.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 321.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 376.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 385.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 386.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 389.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 390.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 325.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 376.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 385.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 386.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 389.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 390.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 321.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 335.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 345.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 349.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in addition (+) at playMatch.pl line 303.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 317.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 318.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 321.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[5] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 328.
+Use of uninitialized value in addition (+) at playMatch.pl line 328.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 329.
+Use of uninitialized value in addition (+) at playMatch.pl line 329.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 330.
+Use of uninitialized value in addition (+) at playMatch.pl line 330.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[3] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[4] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[6] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[1] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value $DetailJoueur[2] in multiplication (*) at playMatch.pl line 331.
+Use of uninitialized value in addition (+) at playMatch.pl line 331.
+Use of uninitialized value in multiplication (*) at playMatch.pl line 356.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 366.
+Use of uninitialized value $DetailJoueur[6] in division (/) at playMatch.pl line 370.
+Use of uninitialized value in join or string at playMatch.pl line 403.
+
+
+PostMatch
+
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.
+Use of uninitialized value $Pos[2] in concatenation (.) or string at postMatch.pl line 212.

@@ -1,0 +1,6 @@
+development:
+  adapter: mysql
+  database: howto
+  username: root
+  password: cacapipi
+  host: localhost 

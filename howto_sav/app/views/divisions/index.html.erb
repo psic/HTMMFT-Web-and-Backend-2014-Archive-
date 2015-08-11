@@ -1,0 +1,11 @@
+<h1>Listing divisions</h1>
+
+<ul>
+<% for division in @divisions %>
+  
+    <li><%= link_to division.nom, division %></li>
+  
+<% end %>
+</ul>
+
+<br />

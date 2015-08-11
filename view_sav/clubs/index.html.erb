@@ -1,0 +1,14 @@
+<% title "Clubs" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for club in @clubs %>
+    <tr>
+      <td><%= club.name %></td>
+      <td><%= link_to "Show", club %></td>
+    </tr>
+  <% end %>
+</table>
+

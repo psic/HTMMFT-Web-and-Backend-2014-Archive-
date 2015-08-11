@@ -1,0 +1,56 @@
+<H2 align="center"><%= @classement[0].nom %></H2>
+<table class="classement_tab">
+<tr>
+<th>
+</th>
+<th>
+Pts
+</th>
+<th>
+V
+</th>
+<th>
+N
+</th>
+<th>
+D
+</th>
+<th>
+Bp
+</th>
+<th>
+Bc
+</th>
+<th>
+Diff
+</th>
+</tr>
+<% @classement.each do |equipe| %>
+<tr>
+<td class="classement_tab">
+<%= equipe.equipe %>
+</td>
+<td class="classement_tab">
+<%= equipe.points %>
+</td>
+<td class="classement_tab">
+<%= equipe.victoire %>
+</td>
+<td class="classement_tab">
+<%= equipe.nul %>
+</td>
+<td class="classement_tab">
+<%= equipe.defaite %>
+</td>
+<td class="classement_tab">
+<%= equipe.bp %>
+</td>
+<td class="classement_tab">
+<%= equipe.bc %>
+</td>
+<td class="classement_tab">
+<%= equipe.bp - equipe.bc %>
+</td>
+</tr>
+<% end %>
+</table>

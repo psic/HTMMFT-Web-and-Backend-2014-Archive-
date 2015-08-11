@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+    <title>HTMMFT</title>  
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <meta name="description" content="HowToManageMyFootballTeam is a free online football (soccer) manager game." />
+	<meta name="keywords" content="Football Manager, Online Football Manager, Free Football Manager, Soccer Manager, Football, Soccer, Online Football Manager Game, Football Club, Football Community" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22341697-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+<body OnUnload="ValidOnQuit()" onload="checkboxInit(<%= @tact.to_json %>,<%= @remp.to_json %>);terrainInit();playerInit(<%= @tact.to_json %>,<%= @remp.to_json %>,<%= @couleur.to_json %>);getTime(<%= getTime%>,<%= getDay %>);">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="global">
+	<div id="header_container">	
+		<div id="header_filler_left"></div>
+		<div id="header">
+			<h1><%= link_to 'How to manage my football team ', '/' %><%= link_to '?', {:controller=>'howto'}, {:class =>"interro"} %></h1>
+			<h2><%= link_to '"Make it smart, keep it simple!"', {:controller=>'howto'} %></h2>
+		</div>
+		<div id="header_filler_right"><%= render :partial => "shared/chrono"%></div>
+	
+
+
+	<%= render :partial => "shared/menu"%>
+
+</div>
+	<div id="container">
+			<%= yield  %>
+		<div class="classement"><%= render :partial => "shared/classement"%></div>
+		<div class="journee"><%= render :partial => "shared/agenda"%></div>
+		<div class="journee"><%= render :partial => "shared/calendrier"%></div>
+
+	<div id="footer">
+		<%= render :partial => "shared/footer"%>
+	</div>
+</div>
+</div>
+</body>
+</html>

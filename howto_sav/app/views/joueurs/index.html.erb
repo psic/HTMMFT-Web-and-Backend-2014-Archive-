@@ -1,0 +1,42 @@
+<h1>Listing joueurs</h1>
+
+
+<table border="2" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+<TH> Joueur </TH>
+<TH> Age  </TH>
+<TH>XP</TH>
+<TH> Mental </TH>
+<TH> Moral </TH>
+<TH> Condition </TH>
+<TH> Tactique </TH>
+<TH> Physique </TH>
+<TH> Technique </TH>
+<TH> Vitesse </TH>
+<TH> Gauche </TH>
+<TH> Centre </TH>
+<TH> Droite </TH>
+<TH> Offensif </TH>
+<TH> Defensif </TH>   
+</tr>
+<% @joueurs.each do |joueur| %>
+<tr>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE"><%= link_to joueur.nom + ' ' + joueur.prenom, joueur %> </td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE"> <%= joueur.age %> ans </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.xp %>%"></div><div class="barfiller" style="left:<%= 100-joueur.xp %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.mental %>%"></div><div class="barfiller" style="left:<%= 100-joueur.mental %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.moral %>%"></div><div class="barfiller" style="left:<%= 100-joueur.moral %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.condition %>%"></div><div class="barfiller" style="left:<%= 100-joueur.condition %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.tactique %>%"></div><div class="barfiller" style="left:<%= 100-joueur.tactique %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.physique %>%"></div><div class="barfiller" style="left:<%= 100-joueur.physique %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.technique %>%"></div><div class="barfiller" style="left:<%= 100-joueur.technique %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.vitesse %>%"></div><div class="barfiller" style="left:<%= 100-joueur.vitesse %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.gch %>%"></div><div class="barfiller" style="left:<%= 100-joueur.gch %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.drt %>%"></div><div class="barfiller" style="left:<%= 100-joueur.drt %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.ctr %>%"></div><div class="barfiller" style="left:<%= 100-joueur.ctr %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.off %>%"></div><div class="barfiller" style="left:<%= 100-joueur.off %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.def %>%"></div><div class="barfiller" style="left:<%= 100-joueur.def %>%"></div> </td>
+</tr>
+<% end %>
+</table>
+

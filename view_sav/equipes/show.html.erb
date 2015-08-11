@@ -1,0 +1,55 @@
+<H1><%= link_to @joueurs[0].equipes[0].nom, :controller=>'clubs', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1>
+
+<table class="liste_joueur" border="0" ALIGN="center" VALIGN ="MIDDLE">
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+<%= image_tag "moral.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "condition.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "icone_terrain_gch.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "icone_terrain_ctr.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "icone_terrain_drt.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "icone_terrain_off.png", :alt => "moral", :class => 'stats' %>
+</th>
+<th>
+<%= image_tag "icone_terrain_def.png", :alt => "moral", :class => 'stats' %>
+</th>
+<% @joueurs.each do |joueur| %>
+<tr>
+<td>
+<%= check_box_tag(joueur.id, joueur.id, false, :onclick=>"addPlayerToField(#{joueur.gch}, #{joueur.ctr},#{joueur.drt},#{joueur.off},#{joueur.def},#{@couleur[0].couleur1},#{@couleur[0].couleur2},this);")%>
+</td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE"><%= link_to joueur.nom + ' ' + joueur.prenom, joueur %> </td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE"> <%= joueur.age %> ans </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.moral %>%"></div><div class="barfiller" style="left:<%= 100-joueur.moral %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.condition %>%"></div><div class="barfiller" style="left:<%= 100-joueur.condition %>%"></div> </td>
+
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.gch %>%"></div><div class="barfiller" style="left:<%= 100-joueur.gch %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.ctr %>%"></div><div class="barfiller" style="left:<%= 100-joueur.ctr %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.drt %>%"></div><div class="barfiller" style="left:<%= 100-joueur.drt %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.off %>%"></div><div class="barfiller" style="left:<%= 100-joueur.off %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.def %>%"></div><div class="barfiller" style="left:<%= 100-joueur.def %>%"></div> </td>
+</tr>
+<% end %>
+</table>
+<div align="center">
+<svg id="terrain" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="720px" height="450px">
+  <image  x="0" y="0" width="720px" height="450px"
+	xlink:href="/images/terrain.jpg" />
+</svg>
+</div>

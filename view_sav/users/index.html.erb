@@ -1,0 +1,8 @@
+  <h1><%=current_user.login%> </h1>
+  <% if current_user %>
+      <%= current_user.email %><BR>
+      <%= link_to "Déconnexion", logout_path %>
+    <% else %>
+      <p><%= link_to "Connexion", new_user_session_path %></p>
+      <p><%= link_to "S'inscrire", new_user_path %></p>
+    <% end %>

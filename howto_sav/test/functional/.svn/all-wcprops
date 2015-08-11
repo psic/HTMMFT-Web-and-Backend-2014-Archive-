@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional
+END
+equipes_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/equipes_controller_test.rb
+END
+joueurs_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/joueurs_controller_test.rb
+END
+contrats_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/howtomanagemyfootballteam_howto/!svn/ver/12/howto/test/functional/contrats_controller_test.rb
+END
+historiques_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/historiques_controller_test.rb
+END
+saisons_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/saisons_controller_test.rb
+END
+staffs_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/staffs_controller_test.rb
+END
+divisions_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/test/functional/divisions_controller_test.rb
+END

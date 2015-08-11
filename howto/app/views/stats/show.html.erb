@@ -1,0 +1,387 @@
+<H1><%= link_to  @E1[0].equipe, :controller=>'equipes', :action=>'show', :id=>@E1[0].equipeID %> <%= @E1[0].score.to_s + ' - ' + @E2[0].score.to_s %> <%= link_to  @E2[0].equipe, :controller=>'equipes', :action=>'show', :id=>@E2[0].equipeID %></H1>
+<H2>Division <%= link_to @div[0].nom, :controller=>'divisions', :action=>'show', :id=>@div[0].id%></H2>
+ 
+<div style="margin:30px;border-radius:20px;background-color:white;color:black;" align="center">
+<div align="left">
+<H2 style="color:black;float:left;" ><%=  @E1[0].equipe %></h2>
+  <svg id="couleur1" xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px">
+    <circle cx="25" cy="25" r="15" fill="hsl(<%=@couleur1[0].couleur1%>,50%,50%)"  stroke-width="4" stroke="hsl(<%=@couleur1[0].couleur2 %>,50%,50%)"/>
+</svg>
+</div>
+<%
+ tbp = 0
+ tbm = 0
+ tpp = 0
+ tpm = 0
+ ttp = 0
+ ttm = 0
+ tdm = 0
+ tdp = 0
+ ttrp  = 0
+ ttrm = 0
+ tbt = 0
+%>
+
+<table class="stat_tab" border="1" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	#
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	</td >
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Ballons
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Passes
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	 Tackles
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Dribbles
+	</td>
+	<td   ALIGN="center" VALIGN ="MIDDLE"colspan="3">
+	 Tir
+	</td>
+</tr>
+<tr>
+	<td>
+	Gagnés
+	</td>
+	<td>
+	Perdus
+	</td>
+	<td>
+	Réussies
+	</td>
+	<td>
+	Ratées
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Cadrés
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Buts
+	</td>
+</tr>
+
+<% @statsE1.each do |joueur| %>
+<%
+ tbp += joueur.bp
+ tbm += joueur.bm
+ tpp += joueur.pp
+ tpm += joueur.pm
+ ttp += joueur.tcp
+ ttm += joueur.tcm
+ tdm += joueur.dm
+ tdp += joueur.dp
+ ttrp  += joueur.trp
+ ttrm += joueur.trm
+ tbt += joueur.but
+%>
+<tr style="margin:5px;padding:5px;">
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.num %>
+	</td>
+	<td nowrap ALIGN="left" VALIGN ="MIDDLE">
+		<%= joueur.nom + ' ' + joueur.prenom %>
+	</td>
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.bp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.bm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.pp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.pm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.tcp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.tcm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.dp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.dm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.trp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.trm %>
+	</td>
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.but %>
+	</td>
+</tr>
+<%end%>
+<tr style="margin:10px;padding:10px;">
+	
+	<td colspan="2" style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	Totaux
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tpp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tpm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tdp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tdm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttrp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttrm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbt %>
+	</td>
+</tr>
+</table>
+
+</div>
+<div align="center">
+<div id="terrain">
+</div>
+</div>
+
+
+
+
+<div style="margin:30px;border-radius:20px;background-color:white;color:black;" align="center">
+<div align="right">
+
+  <svg id="couleur2" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px">
+    <circle cx="25" cy="25" r="15" fill="hsl(<%=@couleur2[0].couleur1%>,50%,50%)"  stroke-width="4" stroke="hsl(<%=@couleur2[0].couleur2 %>,50%,50%)"/>
+</svg>
+<H2 style="color:black;float:right; padding-right:30px;"><%=  @E2[0].equipe %></h2>
+
+
+</div>
+<%
+ tbp = 0
+ tbm = 0
+ tpp = 0
+ tpm = 0
+ ttp = 0
+ ttm = 0
+ tdm = 0
+ tdp = 0
+ ttrp  = 0
+ ttrm = 0
+ tbt = 0
+%>
+<table class="stat_tab" border="1" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	#
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	</td >
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Ballons
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Passes
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	 Tackles
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Dribbles
+	</td>
+	<td   ALIGN="center" VALIGN ="MIDDLE"colspan="3">
+	 Tir
+	</td>
+</tr>
+<tr>
+	<td>
+	Gagnés
+	</td>
+	<td>
+	Perdus
+	</td>
+	<td>
+	Réussies
+	</td>
+	<td>
+	Ratées
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Cadrés
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Buts
+	</td>
+</tr>
+
+<% @statsE2.each do |joueur| %>
+<%
+ tbp += joueur.bp
+ tbm += joueur.bm
+ tpp += joueur.pp
+ tpm += joueur.pm
+ ttp += joueur.tcp
+ ttm += joueur.tcm
+ tdm += joueur.dm
+ tdp += joueur.dp
+ ttrp  += joueur.trp
+ ttrm += joueur.trm
+ tbt += joueur.but
+%>
+<tr style="margin:5px;padding:5px;">
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.num %>
+	</td>
+	<td nowrap ALIGN="left" VALIGN ="MIDDLE">
+		<%= joueur.nom + ' ' + joueur.prenom %>
+	</td>
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.bp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.bm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.pp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.pm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.tcp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.tcm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.dp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.dm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.trp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.trm %>
+	</td>
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= joueur.but %>
+	</td>
+</tr>
+<%end%>
+<tr style="margin:10px;padding:10px;">
+	<td colspan="2" style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	Totaux
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tpp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tpm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tdp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tdm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttrp %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= ttrm %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= tbt %>
+	</td>
+</tr>
+</table>
+</div>

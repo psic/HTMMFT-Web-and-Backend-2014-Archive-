@@ -1,0 +1,22 @@
+
+[indentation]
+indent_width=4
+indent_type=1
+indent_hard_tab_width=8
+detect_indent=false
+indent_mode=2
+
+[project]
+name=htmmft
+base_path=/home/psic/Dev/HTMMFT/howtomanagemyfootballteam_howto/howto
+description=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=2
+FILE_NAME_0=182;None;0;16;1;1;0;/home/psic/Dev/HTMMFT/howtomanagemyfootballteam_howto/howto/app/views/equipes/show.html.erb;0;4
+FILE_NAME_1=2091;CSS;0;16;1;1;0;/home/psic/Dev/HTMMFT/howtomanagemyfootballteam_howto/howto/public/stylesheets/normal.css;0;4
+FILE_NAME_2=4807;None;0;16;1;1;0;/home/psic/Dev/HTMMFT/howtomanagemyfootballteam_howto/howto/app/views/joueurs/show.html.erb;0;4

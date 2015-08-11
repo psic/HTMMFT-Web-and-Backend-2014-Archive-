@@ -1,0 +1,22 @@
+Ceci est un test!!
+
+<span id="m"></span>
+<div align="center">
+<div id="terrain">
+</div>
+</div>
+<BR>
+
+<div align="right" class="bouton">
+
+
+Vitesse : <INPUT type=radio name="vitesse" value="1"  onclick="chg_vitesse(1);" checked/>x1<INPUT type=radio name="vitesse" value="10"  onclick="chg_vitesse(10);" />x10 <INPUT type=radio name="vitesse" value="20"  onclick="chg_vitesse(20);" />x20 <INPUT type=radio name="vitesse" value="50"  onclick="chg_vitesse(50);" />x50
+<%= button_to "Jouer", "javascript:jouer_test()" %>
+<%= button_to "Placer", "javascript:charger_test()" %>
+<%= button_to "Charger Tactiques", "javascript:playerInit1( #{@tact1.to_json} ,#{@remp1.to_json}, #{@couleur1.to_json});playerInit2(#{@tact2.to_json},#{@remp2.to_json},#{@couleur2.to_json})" %>
+
+
+
+
+
+</div>

@@ -1,0 +1,87 @@
+<% if @joueurs[0].equipes.blank? %>
+<H1>25 joueurs libres au hasard</H1>
+<% else %>
+<H1><%= link_to @joueurs[0].equipes[0].nom, :controller=>'clubs', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1>	
+<%end%>
+
+<table class="liste_joueur" border="0" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+<th class="stats">
+#
+</th>
+
+<th >
+</th>
+<th >
+</th>
+<th class="stats">
+<%= image_tag "moral.png", :alt => "moral",:title=>"moral", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "condition.png", :alt => "condition",:title=>"condition", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_gch.png", :alt => "gauche",:title=>"couloir gauche", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_ctr.png", :alt => "centre",:title=>"zone axiale", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_drt.png", :alt => "droite",:title=>"couloir droit", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_off.png", :alt => "offensif",:title=>"zone offensive", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_def.png", :alt => "defensif",:title=>"zone défensive", :class => 'stats' %>
+</th>
+<th class="stats">
+____<BR>Note
+</th>
+<th class="stats" width=40px; >
+Note<BR/>
+</th>
+<th class="stats">
+Mchs</th>
+<th class="stats">
+Acheter</th>
+</tr>
+<% i=1 %>
+<% @joueurs.each do |joueur| %>
+
+
+<% if (i % 2 == 1) %>
+<% @classe = "equipe_impaire" %>
+<% else %>
+<% @classe = "equipe_paire" %>
+<% end %>
+<tr class ="<%= @classe %>" id="tr_<%= joueur.id%>">
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" > <%= joueur.numero %></td>
+
+<td nowrap ALIGN="left" VALIGN ="MIDDLE"  ><%= link_to joueur.nom + ' ' + joueur.prenom, joueur %> </td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" > <%= joueur.age %> ans </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.moral %>%"></div><div class="barfiller" style="left:<%= 100-joueur.moral %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.cond %>%"></div><div class="barfiller" style="left:<%= 100-joueur.cond %>%"></div> </td>
+
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.gch %>%"></div><div class="barfiller" style="left:<%= 100-joueur.gch %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.ctr %>%"></div><div class="barfiller" style="left:<%= 100-joueur.ctr %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.drt %>%"></div><div class="barfiller" style="left:<%= 100-joueur.drt %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.off %>%"></div><div class="barfiller" style="left:<%= 100-joueur.off %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.def %>%"></div><div class="barfiller" style="left:<%= 100-joueur.def %>%"></div> </td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.avgnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.lastnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.nbmatch%></td>
+<td>
+		<%= radio_button_tag('transfert_joueur', joueur.id, false)%>
+
+</td>
+</tr>
+<% i = i + 1 %>
+<% end %>
+</table>
+<div align="right" style="padding:20px;">
+<%= form_tag  '/transferts/valider', :id=>'equipe' do %>
+<%= submit_tag  "Valider", {:class => 'bouton',
+						   :onclick=>"valider_transfert();"} %>
+<%end%>
+</div>

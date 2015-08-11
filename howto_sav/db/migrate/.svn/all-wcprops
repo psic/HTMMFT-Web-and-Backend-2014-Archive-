@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate
+END
+20111014150907_create_equipes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150907_create_equipes.rb
+END
+20111014150916_create_historiques.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150916_create_historiques.rb
+END
+20111014150934_create_saisons.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150934_create_saisons.rb
+END
+20111014150848_create_joueurs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150848_create_joueurs.rb
+END
+20111018001132_create_contrats.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/howtomanagemyfootballteam_howto/!svn/ver/13/howto/db/migrate/20111018001132_create_contrats.rb
+END
+20111014150941_create_staffs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150941_create_staffs.rb
+END
+001_create_database.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/001_create_database.rb
+END
+20111014150926_create_divisions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/db/migrate/20111014150926_create_divisions.rb
+END

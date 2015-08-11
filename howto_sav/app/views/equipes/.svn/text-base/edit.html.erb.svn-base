@@ -1,0 +1,12 @@
+<h1>Editing equipe</h1>
+
+<% form_for(@equipe) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @equipe %> |
+<%= link_to 'Back', equipes_path %>

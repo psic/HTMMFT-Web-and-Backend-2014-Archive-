@@ -1,0 +1,756 @@
+html{
+margin: 0;
+padding: 0;
+}
+body {
+ background-color:white;
+ margin-top:-10px;
+  color: black;
+margin: 0;
+padding: 0;
+} 
+    }
+
+body, p, ol, ul {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+
+}
+p {
+text-align:justify;
+}
+td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   14px;
+  line-height: 18px;
+  font-weight:300;
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+h1,h2, h3 {
+color:grey;
+font-weight:300;}
+a { color: black; 
+	text-decoration:none; }
+a:visited { color:black ; }
+a:hover { color: blue; }
+
+.h1 a:visited { color:grey ; }
+.h1 a:hover { color:#C8D8FA ; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: #C8D8FA;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #C8D8FA;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#header_container{
+background-image:url(fond_equipe_black.jpg);
+ background-color:grey;
+  height: 92px;
+   margin: 0;
+padding: 0;
+padding-top:-20px;
+}
+
+#header {
+    
+ color:black;
+ top: 0px;
+ width:90%;
+ height: 70px;
+ float:left;
+
+}
+#header_filler_right{
+background-image:url(fond_equipe_black.jpg);
+background-color:grey;    
+  width:5%;
+ height:70px;
+ float:left;
+ color:white;
+
+}
+
+#header_filler_left{
+  
+background-color:grey;/
+width:5%;
+ height: 70px;
+ float:left; 
+
+}
+
+#header h1 {
+ color:white;
+ font-size: 34px;
+ font-family: "Times New Roman";
+ font-weight:200;
+ margin-top:-5px;
+}
+
+#header h2 {
+ color:white;
+ font-size: 27px;
+ font-family: "Times New Roman";
+ font-weight:200;
+}
+
+#header a{ color: white;
+	text-decoration:none; }
+#header a:visited { color:white; }
+#header a:hover { color: #C8D8FA; }
+
+#global{
+min-height:100%;
+
+}
+
+#container{
+ margin-top:3px;
+ background-color:white;
+  padding-top : 15px;
+  
+}
+#footer{
+color:#598317;
+text-align:center;
+}
+#footer a{
+color:#598317;
+text-align:center;
+}
+
+
+
+.new_user_session{
+display:inline;
+}
+#header interro{
+color:#084CE3;
+font-weight:200;
+font-size:36px;
+}
+
+
+#header a.interro{color:#084CE3;
+font-weight:200;
+font-size:40px}
+#header a:visited.interro{color:#084CE3;}
+#header a:hover.interro{color:#C8D8FA;}
+
+.laligne{
+display:inline;
+float:right;
+margin:0px;
+padding:0px;
+text-align:right;
+background-color:grey;
+font-size:12px;
+line-height:10px;
+vertical-align:bottom;
+background-image:url(fond_equipe_black.jpg);
+}
+
+.laligne input{
+color:blue;
+padding:0px;
+margin:0px;
+vertical-align:top;
+font-size:10px;
+line-height:10px;
+}
+
+.laligne a{ color: white;
+	text-decoration:none; 
+	 font-size: 12px;
+	 padding-top : 10px;
+	 margin-bottom:0px;}
+.laligne a:visited { color:white; }
+.laligne a:hover { color: #C8D8FA; }
+
+
+.menu{
+float:right;
+background-color:white;
+color: grey;
+width : 19%;
+margin-left : 80%;
+padding:5px;
+
+}
+
+.menu a{ color: #598317;
+	text-decoration:none; }
+.menu a:visited { color:#598317; }
+.menu a:hover { color: #C8D8FA; }
+
+.menu td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   12px;
+  padding-top:0px;
+  margin-top:0px;
+   padding-bottom:0px;
+  margin-bottom:0px;
+}
+.menu table{
+ padding-top:0px;
+  margin-top:0px;
+   padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+
+#onglets
+{
+    list-style-type : none; 
+	margin-left:-40px;
+	margin-top:-20px;
+	color : grey;
+ 
+}
+#onglets h1{
+	margin:0px;
+	margin-top:10px;
+	color : grey;
+}
+
+#onglets li
+{
+    float : left;
+    margin-right: 11px;
+    text-align : center;
+    width:314px;
+
+}
+
+li#icon_terrain{
+	width:52px;
+}
+
+
+#onglets li.active 
+{
+    color:white;
+}
+
+#onglets a
+{
+    color:grey;
+    text-decoration : none;
+}
+
+#onglets li.active a
+{
+    color:grey;
+}
+
+#onglets a:hover
+{
+    color :black;
+}
+
+.equipe{
+float:left;
+height:100%;
+width:79%;
+color:black;
+}
+
+.stats_layout{
+float:left;
+height:100%;
+width:100%;
+color:grey;
+}
+
+
+
+stats_layout td{
+  font-size: 14px;
+   line-height: 5px;
+   padding-top:1px;
+    padding-bottom:1px;
+}
+.stats_layout tr{
+  font-size: 14px;
+   line-height: 1px;
+   padding: 1px;
+}
+
+.stats_layout a{ color: grey; 
+	text-decoration:none; }
+.stats_layout a:visited { color:grey ; }
+.stats_layout a:hover { color: black; }
+.stats_layout h1{
+color:grey;
+margin:0px;
+margin-top:4px;
+margin-left:15px;}
+.stats_layout h2{
+color:grey;
+margin:0px;
+margin-top:4px;
+margin-left:15px;}
+
+
+
+
+.equipe td{
+  font-size: 14px;
+   line-height: 5px;
+   padding-top:1px;
+    padding-bottom:1px;
+}
+.equipe tr{
+  font-size: 14px;
+   line-height: 1px;
+   padding: 1px;
+}
+
+.equipe a{ 
+	text-decoration:none; }
+.equipe a:visited { color:grey ; }
+.equipe a:hover { color: blue; }
+.equipe h1{
+color:grey;
+margin:0px;
+margin-top:4px;
+margin-left:15px;}
+.equipe h2{
+color:white;
+margin:0px;
+margin-top:4px;
+margin-left:15px;}
+
+
+.selected a{color:black;}
+.selected a:visited{color:black;}
+.selected {color:black;}
+
+.unselected a{color:black;}
+.unselected a:visited{color:black;}
+.unselected {color:black;}
+
+
+.equipe_paire{
+ background-color:white;
+}
+.equipe_impaire{
+ background-color:lightGray ;
+}
+.mon_equipe{
+}
+.classement
+{
+margin-left : 80%;
+background-color:white;
+width:19%;
+margin-top:-25px;
+}
+.classement a{ color: black; 
+	text-decoration:none; }
+.classement a:visited { color:black ; }
+.classement a:hover { color: blue; }
+.classement.a h2 {
+color:grey;
+margin:5px;
+margin-top:10px;
+}
+.classement tr{
+padding:1px;
+width:100%;
+}
+
+.classement td{
+padding:1px;
+padding-right:3px;
+padding-left:1px;
+}
+.classement th{
+text-align:center;
+width:100%;
+}
+.class_container{
+margin-right:2px;
+margin-left:2px;
+width:100%;
+}
+.classement_tab{
+margin-right:0px;
+margin-left:0px;
+width:100%;
+}
+
+td.classement_tab{
+font-size:12px;
+}
+.classement h2{
+color:grey;
+margin-bottom:5px;
+margin-top:10px;
+padding-bottom:5px;
+padding-top:10px;
+}
+
+.impaire{
+background-color:lightGray;
+}
+
+.paire{
+background-color:white;
+}
+.agenda{
+font-size:12px;
+line-height:13px;
+width:100%;
+}
+
+.agenda tr{
+padding:2px;
+margin-bottom:2px;
+font-size:12px;
+line-height:15px;
+}
+
+.agenda td{
+padding:2px;
+padding-right:4px;
+padding-left:4px;
+margin-bottom:2px;
+font-size:12px;
+line-height:15px;
+}
+
+
+.calendrier{
+font-size:12px;
+line-height:12px;
+width:100%
+}
+
+
+.calendrier tr{
+padding:1px;
+margin:0px;
+font-size:12px;
+line-height:12px;
+}
+
+.calendrier td{
+padding:1px;
+padding-right:4px;
+padding-left:4px;
+font-size:12px;
+line-height:15px;
+}
+
+.journee{
+text-align:center;
+margin-left : 80%;
+width:20%;
+color:black;
+padding-bottom:10px;
+width:19%;
+}
+.journee h2{
+color:grey;
+margin-bottom:5px;
+margin-top:10px;
+padding-bottom:5px;
+padding-top:10px;
+}
+
+.liste_joueur{
+border-style:none;
+
+}
+table {
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    border-collapse:collapse;
+    margin: 5px;
+}
+td {
+    padding: 5px;
+}
+th.graph {
+   font-size:25px;
+   font-weight:300;
+}
+
+td.graph {
+    width: 100px;
+}
+td.graph .bar {
+    background: #4291ea;
+    height:7px;
+	float:left;
+	
+}
+td.graph .barfiller {
+    background: #022567;
+    height:7px;
+	}
+
+td.graph_joueur {
+    width: 200px;
+}
+td.graph_joueur .bar_joueur {
+   background: #4291ea;
+    height: 15px;
+    float:left;   
+
+}
+td.graph_joueur .barfiller_joueur {
+    background: #022567;
+    height: 15px;
+    
+} 
+
+}
+th.stats{
+line-height:10px;
+vertical-align:bottom;
+}
+
+td.graph .icon_stats{
+float:left;
+width:16px;
+height:16px;
+}
+
+.carac_joueur{
+font-size : 18px;
+line-height : 25px;
+margin:20px;
+
+}
+.carac_joueur td{
+height : 50px;
+}
+
+.carac_joueur h2{
+margin-bottom:10px;
+margin-top:20px;
+}
+
+.carac_joueur h3{
+margin:14px;
+margin-left:35px;
+display:inline;
+}
+
+.carac_joueur table{
+
+border-width : 1px;
+
+}
+.report_form{
+
+}
+
+.texte{
+margin-top:-12px;
+padding:5px;
+height:100%;
+color:black;
+background-color:white;
+
+}
+.texte h1{
+color:#598317;
+}
+.texte h2{
+color:#598317;
+}
+.texte h3{
+color:#598317;
+}
+.texte h4{
+color:#598317;
+}
+.texte p{
+padding-top:2px;
+padding-bottom:0px;
+padding-right:7px;
+padding-left:7px;
+margin:0px;
+}
+
+.texte td{
+font-size:13px;
+font-weight:normal;
+}
+.texte a {
+color:#598317;
+}
+.texte a:hover { color: #C8D8FA; }
+
+.warning{
+border:solid 4px red;
+margin-top:-5px;
+font-weight:300;
+padding:10px;
+text-align:justify;
+}
+
+.sommaire{
+margin:0px;
+}
+.sommaire h1{
+padding:1px;
+color:black;
+padding-left:2px;
+font-size:20px;
+margin:0px;
+font-weight:300;
+}
+
+.sommaire h2{
+padding:1px;
+padding-left:10px;
+font-size:20px;
+color:black;
+margin:0px;
+font-weight:300;
+}
+.sommaire h3{
+padding:1px;
+padding-left:50px;
+font-size:16px;
+color:black;
+margin:0px;
+font-weight:300;
+}
+.sommaire h4{
+padding:1px;
+padding-left:90px;
+font-size:14px;
+color:black;
+margin:0px;
+font-weight:normal;
+}
+.sommaire a{
+padding:1px;
+color:black;
+}
+
+.button_to{
+}
+
+.bouton{
+
+margin:5px;
+}
+
+.bouton input{
+float:right;
+}
+
+.club_info{
+font-size : 18px;
+line-height : 25px;
+margin:30px;
+
+}
+
+
+.club_info td{
+  font-size: 14px;
+   line-height: 15px;
+   padding-top:1px;
+    padding-bottom:1px;
+}
+.club_info tr{
+  font-size: 14px;
+   line-height: 15px;
+   padding: 1px;
+}
+
+#top{
+
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-left:20px;
+margin-right:20px;
+margin-top:5px;
+margin-bottom:5px;
+border-radius:20px;
+background-color:white;
+color:black;
+}
+
+#top a{ color: black; 
+	text-decoration:none; }
+#top a:visited { color:black ; }
+#top a:hover { color: #C8D8FA; }
+
+.stat_tab td{
+padding-left:5px;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:5px;
+}
+
+.stat_tab th{
+margin-left:5px;
+margin-right:5px;
+margin-top:10px;
+}
+
+.stat_tab h2
+{
+color:black;
+padding-bottom:5px;
+padding-top:5px;
+}
+
+.stat_tab a{ color: black; 
+	text-decoration:none; }
+.stat_tab a:visited { color:black ; }
+.stat_tab a:hover { color: #C8D8FA; }
+
+.entrainement{
+
+padding-left:20px;
+padding-top : 20px;
+
+}

@@ -1,0 +1,368 @@
+
+<H1 style="float:left;"><%= @joueur.numero  %>. <%= @joueur.nom  %> <%= @joueur.prenom  %> </H1> <H2> &nbsp;/ <%= @joueur.age %> ans / <%=  @joueur.equipes[0].nom  %></H2>
+
+<div style="border: 1px solid; margin:20px;" align="center">
+<table class="carac_joueur">
+<tr>	
+		<td width="300px" ALIGN="center" colspan="3">
+			<%= image_tag "moral.png", :alt => "moral", :title=>"moral", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.moral %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.moral %>%"></div> </td>
+		<td width="300px" ALIGN="center" colspan="3">
+			<%= image_tag "condition.png", :alt => "condition",:title=>"condition physique", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.cond %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.cond %>%"></div> </td>
+</tr>	
+<tr>
+		<td width="100px" ALIGN="center">
+			<%= image_tag "icon_xp.png", :alt => "xp",:title=>"experience", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.xp %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.xp %>%"></div> </td>
+		<td width="300px" ALIGN="center" colspan="3">
+			<%= image_tag "icon_men2.png", :alt => "mental",:title=>"mental", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.mental %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.mental %>%"></div> </td>	
+		<td width="100px" ALIGN="center">
+			<%= image_tag "icon_tal2.png", :alt => "talent",:title=>"talent", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.talent %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.talent %>%"></div> </td>
+	</tr>
+
+<tr>
+	<td width="100px" ALIGN="center">
+		<%= image_tag "icon_tac2.png", :alt => "tactique",:title=>"tactique", :class => 'stats' %>
+	</td>
+	<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.tactique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.tactique %>%"></div> </td>
+	<td width="60px" ALIGN="right">
+		<%= image_tag "icon_tec2.png", :alt => "technique",:title=>"technique", :class => 'stats' %>
+	</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.technique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.technique %>%"></div> </td>
+		</td>
+	<td width="100px" ALIGN="center">
+	<%= image_tag "icon_for1.png",:alt => "force",:title=>"force", :class => 'stats' %>
+	</td>
+	<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.physique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.physique %>%"></div> </td>
+	<td width="100px" ALIGN="center">
+	<%= image_tag "icon_vit2.gif", :alt => "vitesse",:title=>"vitesse", :class => 'stats' %>
+	</td>
+	<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.vitesse %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.vitesse %>%"></div> </td>
+</tr>
+</table>
+</div>
+<div style="border: 1px solid; margin:20px;" align="center">
+<table class="carac_joueur" >
+<tr>
+	<td width="100px" ALIGN="center" colspan="3">
+	<%= image_tag "icone_terrain_off.png", :alt => "offensif",:title=>"zone offensive", :class => 'stats' %>
+	</td>
+	<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.off %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.off %>%"></div> </td>		
+</tr>
+<tr>
+		<td width="100px" ALIGN="center">
+			<%= image_tag "icone_terrain_gch.png", :alt => "gauche",:title=>"couloir gauche", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.gch %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.gch %>%"></div> </td>
+
+		<td width="100px" ALIGN="center">
+			<%= image_tag "icone_terrain_ctr.png", :alt => "centre",:title=>"zone axiale", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.ctr %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.ctr %>%"></div> </td>
+
+		<td width="100px" ALIGN="center">
+			<%= image_tag "icone_terrain_drt.png", :alt => "droite",:title=>"couloir droit", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.drt %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.drt %>%"></div> </td>
+</tr>
+<tr>	
+		<td width="100px" ALIGN="center" colspan="3">
+			<%= image_tag "icone_terrain_def.png", :alt => "defensif",:title=>"zone défensive", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.def %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.def %>%"></div> </td>
+</tr>
+</table>
+</div>
+
+<div style="border: 1px solid; margin:20px;" align="center">
+<%
+ tbp = 0
+ tbm = 0
+ tpp = 0
+ tpm = 0
+ ttp = 0
+ ttm = 0
+ tdm = 0
+ tdp = 0
+ ttrp  = 0
+ ttrm = 0
+ tbt = 0
+ notem = 0
+ count =0
+ x= 0
+ y=0
+%>
+
+
+<table class="stat_tab" border="1" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	# journée
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Ballons
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Passes
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	 Tackles
+	</td>
+	<td  ALIGN="center" VALIGN ="MIDDLE" colspan="2">
+	Dribbles
+	</td>
+	<td   ALIGN="center" VALIGN ="MIDDLE" colspan="3">
+	 Tir
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	Note
+	</td>
+	<td ALIGN="center" VALIGN ="MIDDLE" rowspan="2">
+	Position
+	</td>
+	
+</tr>
+<tr>
+	<td>
+	Gagnés
+	</td>
+	<td>
+	Perdus
+	</td>
+	<td>
+	Réussies
+	</td>
+	<td>
+	Ratées
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Réussis
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Cadrés
+	</td>
+	<td>
+	Ratés
+	</td>
+	<td>
+	Buts
+	</td>
+</tr>
+
+
+<% @stats.each do |journee| %>
+<%
+ tbp += journee.bp
+ tbm += journee.bm
+ tpp += journee.pp
+ tpm += journee.pm
+ ttp += journee.tcp
+ ttm += journee.tcm
+ tdm += journee.dm
+ tdp += journee.dp
+ ttrp  += journee.trp
+ ttrm += journee.trm
+ tbt += journee.but
+ #notem += journee.note
+ notem += 0
+ count+=1.0
+%>
+
+<% @pos.each do |position| %>
+<%
+	if position.num_journee == journee.num_journee
+		x = position.x
+		y = position.y
+	end
+%>
+<%end%>
+
+<tr style="margin:5px;padding:5px;">
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.num_journee %>
+	</td>
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.bp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.bm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.pp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.pm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.tcp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.tcm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.dp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.dm %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;" ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.trp %>
+	</td>
+	
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.trm %>
+	</td>
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.but %>
+	</td>
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<%= journee.note %>
+	</td>
+	<td style="margin:5px;padding:5px;"ALIGN="center" VALIGN ="MIDDLE">
+		<svg xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="31">
+			<image x="0" y="0" width="50" height="31"
+				xlink:href="/images/petit_terrain.png" />
+				<circle cx="<%=(x /(720/50) ).to_s %>" cy="<%=(y /(450/31) ).to_s%>" r="3" stroke="hsl(<%=@couleur[0].couleur2 %>,50%,50%)"
+					stroke-width="1" fill="hsl(<%=@couleur[0].couleur1%>,50%,50%)"/>
+		</svg>
+	</td>
+</tr>
+
+<%
+ x= 0
+ y=0
+%>
+
+<%end%>
+<tr style="margin:10px;padding:10px;">
+	
+	<td  style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	Moyenne
+	</td>
+	<% if count != 0 %>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tbp/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tbm/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tpp/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tpm/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(ttp/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(ttm/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tdp/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tdm/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(ttrp/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(ttrm/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(tbt/count, :precision => 2) %>
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 <%= number_with_precision(notem/count, :precision => 2) %>
+	</td>
+	
+	<% else %>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	 0
+	</td>
+	<td style="margin:10px;padding:10px;"ALIGN="center" VALIGN ="MIDDLE">
+	0
+	</td>
+	<%end%>
+</tr>
+</table>
+</div>
+
+<div style="border: 1px solid; margin:20px;" align=center>
+<table class="carac_joueur" >
+<tr valign="top">
+	<td>
+	<H2> Transfert & prêt </H2>
+	<H3>Transfert ? :</h3> <%= @joueur.liste_transfert %><BR>
+	<H3>Pret ? : </H3><%= @joueur.liste_pret %><BR>
+	</td>
+	<td>
+	<H2> Blessure ? : <%= @joueur.blessure %></H2>
+	</td>
+	<td>
+	<H2> Contrat </H2>
+	<H3>Date de début :</H3> <%= @joueur.contrats[0].mois_debut %> / <%= @joueur.contrats[0].anne_debut %> (mm/aa)  <BR>
+	<H3>Date de fin :</H3> <%= @joueur.contrats[0].mois_fin %> / <%= @joueur.contrats[0].anne_fin %> (mm/aa)  <BR>
+	<H3>Durée :</H3> <%= @joueur.contrats[0].duree %> <BR>
+	<H3>Salaire :</H3> <%= @joueur.contrats[0].salaire %><BR>
+	</td>
+</tr>
+</table>
+</div>

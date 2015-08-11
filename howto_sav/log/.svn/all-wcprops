@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/log
+END
+test.log
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/log/test.log
+END
+development.log
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/howtomanagemyfootballteam_howto/!svn/ver/17/howto/log/development.log
+END
+production.log
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/log/production.log
+END
+server.log
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/log/server.log
+END

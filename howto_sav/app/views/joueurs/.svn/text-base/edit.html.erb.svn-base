@@ -1,0 +1,12 @@
+<h1>Editing joueur</h1>
+
+<% form_for(@joueur) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @joueur %> |
+<%= link_to 'Back', joueurs_path %>

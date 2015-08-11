@@ -1,0 +1,7 @@
+
+<H1>Division <%= @division.nom %></H1>
+<ul>
+<% for equipe in @equipe %>
+    <li><%= link_to equipe.nom, equipe %></li>
+<% end %>
+</ul>

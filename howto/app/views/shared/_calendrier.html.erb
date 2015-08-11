@@ -1,0 +1,32 @@
+<div align="center">
+<H2><%= link_to 'Calendrier', :controller=>'divisions', :action=>'show', :id=>@classement[0].divID %></H2>
+
+<table class="calendrier">
+<% i=1 %>
+<% @calendrier.each do |match| %>
+<% if (i % 2 == 1) %>
+<% @classe = "impaire" %>
+<% else %>
+<% @classe = "paire" %>
+<% end %>
+<tr class ="<%= @classe %>">
+<td>
+J<%=match.num_journee%>
+</td>
+<td>
+<%= link_to match.equipe1Nom, :controller=>'equipes', :action=>'show', :id=>match.equipe1ID %>
+</td>
+<td width=50px  ALIGN="center" VALIGN ="MIDDLE">
+<%= link_to   match.score1.to_s + '  -  ' + match.score2.to_s , :controller=>'stats', :action=>'show', :id=>match.id %>
+</td>
+<td>
+<%= link_to match.equipe2Nom, :controller=>'equipes', :action=>'show', :id=>match.equipe2ID %>
+</td>
+</tr>
+<% i = i + 1 %>
+<% end %>
+</table>
+</div>
+
+
+

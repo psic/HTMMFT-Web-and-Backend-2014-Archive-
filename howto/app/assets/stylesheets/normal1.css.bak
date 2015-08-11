@@ -1,0 +1,264 @@
+body { background-color: #598317; color: black; }
+
+body, p, ol, ul {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  background-color: #598317;
+}
+td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   14px;
+  line-height: 18px;
+  font-weight:bold;
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+h1,h2 {color : #022567;}
+a { color: white; 
+	text-decoration:none; }
+a:visited { color:black ; }
+a:hover { color: #012CDA; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#header_container{
+ background-color:#598317;
+
+}
+
+#header {
+ color:white;
+ background-color:#598317;
+ background-image:url(bandeau.jpg);
+ background-repeat:no-repeat;
+ top: 0px;
+ margin:0 auto;
+ width: 820px;
+ height: 95px;
+ float:left;
+}
+#header_filler_right{
+/*background-image:url(fond_ligne.png);*/
+background-color:#9EA2A5;
+/*margin-left:81%;*/
+ height: 95px;
+}
+
+#header_filler_left{
+background-color:#598317;
+ width :13%;
+ height: 95px;
+ float:left;
+}
+
+#header h1 {
+ color:white;
+ font-size: 30px;
+ font-family: "Times New Roman";
+ padding-top:4px;
+ padding-left:3px;
+}
+
+#header h2 {
+ color:white;
+ font-size: 24px;
+ font-family: "Times New Roman";
+}
+
+#global{
+margin-left:auto;
+margin-right:auto;
+position:relative;
+width:1200px;
+min-height:100%;
+}
+#container{
+margin-top:23px;
+}
+.new_user_session{
+display:inline;
+}
+
+.laligne{
+display:inline;
+float:right;
+height : 25px;
+text-align:right;
+}
+
+.laligne a{ color: white;
+	text-decoration:none; }
+.laligne a:visited { color:white; }
+.laligne a:hover { color: red; }
+
+.menu{
+float:right;
+background-color:#9EA2A5;
+color: #598317;
+width : 19%;
+height : 25px;
+text-align:right;
+
+}
+
+.menu a{ color: #598317;
+	text-decoration:none; }
+.menu a:visited { color:#598317; }
+.menu a:hover { color: red; }
+
+td.classement_tab{
+font-size:11px;
+}
+
+.equipe{
+float:left;
+height:95%;
+width:80%;
+color:white;
+background-image:url(fond_equipe.jpg);
+border-radius:20px 20px 0 20px;
+margin-top:5px;
+/* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.506);*/
+box-shadow: 5px 5px 10px #888;
+}
+
+.equipe a{ color: white; 
+	text-decoration:none; }
+.equipe a:visited { color:white ; }
+.equipe a:hover { color: red; }
+.equipe h1{
+color:white;}
+
+.classement
+{
+margin-left : 81%;
+background-color:#9EA2A5;
+border-radius:0 0 20px 20px;
+}
+.classement a{ color: black; 
+	text-decoration:none; }
+.classement a:visited { color:black ; }
+.classement a:hover { color: red; }
+.classement h2 {
+color:#022567;
+}
+
+.journee{
+height:200px;
+margin-left : 80%;
+background-image:url(fond_equipe.jpg);
+border-radius:0px 20px 20px 0px;
+/* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.506) */
+box-shadow: 5px 5px 10px #888;
+}
+.liste_joueur{
+border-style:none;
+background-color: transparent;
+
+}
+table {
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    border-collapse:collapse;
+    margin: 5px;
+}
+td {
+    padding: 5px;
+}
+th.graph {
+   font-size:25px;
+   font-weight:bold;
+}
+
+td.graph {
+    width: 100px;
+}
+td.graph .bar {
+    background: #4291ea;
+    height:5px;
+	float:left;
+	border:outset;
+    
+}
+td.graph .barfiller {
+    background: #022567;
+    height:5px;
+	border:inset;
+}
+
+td.graph_joueur {
+    width: 200px;
+}
+td.graph_joueur .bar_joueur {
+   background: #4291ea;
+    height: 15px;
+    float:left;   
+    border:outset;
+}
+td.graph_joueur .barfiller_joueur {
+    background: #022567;
+    height: 15px;
+    border:inset;
+} 
+.joueur{
+float:left;
+}
+td.graph .stats{
+/*float:left;*/
+}
+td.graph .icon_stats{
+float:left;
+width:16px;
+height:16px;
+}
+.report_form{
+clear:right;
+display:block;
+}
+
+.report{
+float:left;
+ padding:8px;
+ overflow:auto;
+}
+
+

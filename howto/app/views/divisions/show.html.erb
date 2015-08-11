@@ -1,0 +1,59 @@
+<h1>Calendrier & Résultats</h1>
+<h2>Division <%= @division.nom %></h2>
+<% current=0 %>
+<% inline = 0 %>
+
+<div style="margin:30px;border-radius:20px;background-color:white;color:black;" align="center">
+<table border="1" class="stat_tab">
+<tr>
+<% i=1 %>
+<% @saison.each do |match| %>
+
+<% if (i % 2 == 1) %>
+<% @classe = "equipe_impaire" %>
+<% else %>
+<% @classe = "equipe_paire" %>
+<% end %>
+	
+		<% if current != match.num_journee %>
+			
+			
+			<% if current != 0 %>
+				</table>
+				<% inline +=1 %>
+				<% if inline == 5 %>
+					</tr>
+					<tr>
+					<% inline = 0 %>
+				<% end %>
+				
+			<%end%>
+			
+			</td>
+			<td>
+			<H2 align="center"> Journée <%= match.num_journee %></H2>
+			<table class="stat_tab">
+			<% current = match.num_journee%>
+			
+		<% end %>
+		<% if match.equipe1_id == @equipe || match.equipe2_id == @equipe  %>
+		<tr class ="<%= @classe %>" style="border-style: solid; border-width: 1px; border-color:white;">
+		<% else %>
+		<tr class ="<%= @classe %>">
+		<% end %>
+			<td>
+				<%= match.equipe1Nom %>
+			</td>
+			<td width=50px  ALIGN="center" VALIGN ="MIDDLE">
+				<%= link_to   match.score1.to_s + '  -  ' + match.score2.to_s , :controller=>'stats', :action=>'show', :id=>match.id, :equipe=>params[:equipe] %>
+			</td>
+			<td>
+				<%= match.equipe2Nom %>
+			</td>
+		</tr>
+<% i = i + 1 %>		
+<%end%>
+</table>
+</tr>
+</table>
+</div>

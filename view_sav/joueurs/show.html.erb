@@ -1,0 +1,135 @@
+<div style="float:left" border="1" border-color="red">
+<H1><%= @joueur.nom  %>, <%= @joueur.prenom  %> (<%= @joueur.age %> ans)</H1>
+<H2><%=  @joueur.equipes[0].nom  %></H2>
+</div>
+
+<div>
+<table>
+<tr>	
+		<td>
+			<%= image_tag "moral.png", :alt => "moral", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.moral %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.moral %>%"></div> </td>
+		<td>
+			<%= image_tag "condition.png", :alt => "condition", :class => 'stats' %>
+		</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.condition %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.condition %>%"></div> </td>
+</tr>	
+</table>
+</div>
+<BR>
+<div style="float:left">
+<table  cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<th>
+		<%= image_tag "icon_xp.png", :alt => "xp", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.xp %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.xp %>%"></div> </td>
+	</tr>
+	<tr>	
+		<th>
+			<%= image_tag "icon_men2.png", :alt => "mental", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.mental %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.mental %>%"></div> </td>
+	</tr>
+	<tr>	
+		<th>
+		<%= image_tag "icon_tal2.png", :alt => "talent", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.talent %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.talent %>%"></div> </td>
+	</tr>
+</table>
+</div>
+
+<div>
+<table  cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+	<th>
+		<%= image_tag "icon_tac2.png", :alt => "tactique", :class => 'stats' %>
+	</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.tactique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.tactique %>%"></div> </td>
+	</tr>
+	<tr>
+	<th>
+		<%= image_tag "icon_tec2.png", :alt => "technique", :class => 'stats' %>
+	</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.technique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.technique %>%"></div> </td>
+	</tr>
+	<tr>
+		<th>
+		<%= image_tag "icon_for1.png",:alt => "force", :class => 'stats' %>
+	</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.physique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.physique %>%"></div> </td>
+	</tr>
+	<tr>
+		<th>
+		<%= image_tag "icon_vit2.gif", :alt => "vitesse", :class => 'stats' %>
+	</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.vitesse %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.vitesse %>%"></div> </td>
+	</tr>
+</table>
+</div>
+
+<div>
+<table cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+		<th>
+			<%= image_tag "icone_terrain_gch.png", :alt => "gauche", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.gch %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.gch %>%"></div> </td>
+
+		<th>
+			<%= image_tag "icone_terrain_ctr.png", :alt => "centre", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.ctr %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.ctr %>%"></div> </td>
+
+		<th>
+			<%= image_tag "icone_terrain_drt.png", :alt => "droite", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.drt %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.drt %>%"></div> </td>
+</tr>
+<tr>	
+		<th>
+			<%= image_tag "icone_terrain_off.png", :alt => "offensif", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.off %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.off %>%"></div> </td>
+		
+		<th>
+			<%= image_tag "icone_terrain_def.png", :alt => "defensif", :class => 'stats' %>
+		</th>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.def %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.def %>%"></div> </td>
+	</tr>
+</table>
+</div>
+
+<div >
+<table style="float:left" border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Transfert ?</td>
+		<td>Pret ?</td>
+		<td>Blessure ?</td>
+	</tr>
+	<tr>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.liste_transfert %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.liste_pret %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.blessure %></td>
+	</tr>
+</table>
+</div>
+<div>
+<table border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Date début (mm/aa)</td>
+		<td>Date Fin (mm/aa)</td>
+		<td>Durée</th>
+		<td>Salaire</td>
+	</tr>
+	<tr>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].mois_debut %> / <%= @joueur.contrats[0].anne_debut %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].mois_fin %> / <%= @joueur.contrats[0].anne_fin %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].duree %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].salaire %></td>
+	</tr>
+</table>
+</div>
+

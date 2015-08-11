@@ -1,0 +1,1 @@
+UPDATE classements SET points = 0, victoire = 0, defaite = 0, nul = 0, bp = 0, bc = 0, ext_victoire = 0, ext_defaite = 0,	ext_nul= 0,ext_points= 0, ext_bp= 0, ext_bc = 0, dom_victoire = 0,dom_defaite = 0, dom_nul= 0, dom_points= 0,	dom_bp= 0,dom_bc= 0, nb_journee = 0 

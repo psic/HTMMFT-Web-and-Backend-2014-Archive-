@@ -1,0 +1,196 @@
+<% 
+	@joueur_numero=[]
+	@remp_numero=[]
+	@tact.each do |pos|
+		unless pos.blank?
+			@joueur_numero.push(pos[0].numero)
+		end	
+	end
+	@remp.each do |pos|
+		unless pos.blank?
+			@remp_numero.push(pos[0].numero)
+		end	
+	end
+ %>
+
+
+
+
+
+<div id="menu">
+			<ul id="onglets">
+			<li id ="icon_terrain" class="active"><%= link_to (image_tag 'icone_terrain.png'), '/' %>
+<%if not current_user %>		
+			<li><H1><%= link_to @joueurs[0].equipes[0].nom, :controller=>'clubs', :action=>'show', :id=>@joueurs[0].equipes[0].id %> / Démo</H1></li>
+			<li><H1><a href="">Transferts</a></H1> (non disponible en démo)</li>
+			<li><H1><a href="">Entrainement</a></H1> (non disponible en démo)</li>
+<% else %>
+		<% if @login.empty?  %>
+			<li><H1><%= link_to @joueurs[0].equipes[0].nom, :controller=>'clubs', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1></li>				
+		<% else %>		
+			<li><H1><%= link_to @joueurs[0].equipes[0].nom, :controller=>'clubs', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1></li>
+		<% end %>
+		<% if current_team  == params[:id].to_i || request.path == '/' || request.path == "/mon_equipe" %>
+			<li><H1><%= link_to 'Transferts', :controller=>'transferts', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1></li>
+			<li><H1><%= link_to 'Entrainement', :controller=>'entrainements', :action=>'show', :id=>@joueurs[0].equipes[0].id %></H1></li>
+		<% else %>
+			<li><H1>Transferts</H1> (non disponible)</li>
+			<li><H1>Entrainement</H1> (non disponible)</li>
+		<% end %>	
+		 
+		
+<% end %>
+  </ul>
+</div>		
+<div class = "equipe">
+<%if not current_user %>		
+		<div id="top">
+			<p><strong>Bienvenu</strong> sur "How to manage my football team" qui est jeu en ligne totalement gratuit qui se joue entiérement dans votre navigateur, sans aucune
+			installation de logiciel. Le jeu et le site ne sont pas encore en version finale, mais on peut jouer et les championnats ont déjà commencé. C'est un 
+			jeu de gestion sportive de football autrement appelé jeux d'entraineur ou de football manager. Vous allez prendre en main le destin d'une équipe, sa
+			vingtaine de bonhommes avec un championnat à remporter. Le jeu est concu pour que vos préocupations du jeu se rapproche le plus de ce que peut vivre 
+			un homme de terrain, proche du rectangle vert. Créez votre tactique, sélectionnez les meilleurs joueurs, et croisez les doigts les jours de matchs. 
+			Les matchs ont lieu tout les 3, 4 jours. Puis viendront la gestion de l'entrainement et des transferts.</p>
+			<p>Inscrivez-vous et commencez l'aventure ou profitez de l'équipe démo pour faire le tour du jeu et des possibilités. Plus d'information et d'aides 
+			disponible dans la rubrique <a href="./howto" target="_blank">how to </a>, et un rapide manuel d'uilisation est <a href="/images/manuel.png" target="_blank">ici</a>
+			</p>
+			<p>
+				<strong>Bon jeu et bon matchs!</strong>
+			</p>
+		</div>
+		
+<% end %>
+<table class="liste_joueur" border="0" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+<th class="stats">
+#
+</th>
+<th class="stats">
+<%= image_tag "icone_tactique.png", :alt => "tactique", :class => 'stats' %>
+</th>
+<th >
+</th>
+<th >
+</th>
+<th class="stats">
+<%= image_tag "moral.png", :alt => "moral",:title=>"moral", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "condition.png", :alt => "condition",:title=>"condition", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_gch.png", :alt => "gauche",:title=>"couloir gauche", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_ctr.png", :alt => "centre",:title=>"zone axiale", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_drt.png", :alt => "droite",:title=>"couloir droit", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_off.png", :alt => "offensif",:title=>"zone offensive", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_def.png", :alt => "defensif",:title=>"zone défensive", :class => 'stats' %>
+</th>
+<th class="stats">
+____<BR>Note
+</th>
+<th class="stats" width=40px; >
+Note<BR/>
+</th>
+<th class="stats">
+Mchs</th>
+</tr>
+<% i=1 %>
+<% @joueurs.each do |joueur| %>
+
+<% 
+trouve=false;
+couleur_nom=""
+@joueur_numero.each do |numero|
+	if numero == joueur.numero
+		trouve = true
+	end
+end
+@remp_numero.each do |numero|
+	if numero == joueur.numero
+		trouve = true
+	end
+end
+if trouve == true
+	couleur_nom = "selected"
+else
+	couleur_nom = "unselected"
+end
+trouve=false;
+%>
+
+
+<% if (i % 2 == 1) %>
+<% @classe = "equipe_impaire" %>
+<% else %>
+<% @classe = "equipe_paire" %>
+<% end %>
+<tr class ="<%= @classe %>" id="tr_<%= joueur.id%>">
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" class=" <%= couleur_nom %>"> <%= joueur.numero %></td>
+<td>
+<% if current_user %>
+	<% if current_team  == params[:id].to_i || request.path == '/' || request.path == "/mon_equipe" %>
+		<%= check_box_tag(joueur.id, joueur.id, false, :onclick=>"addPlayerToField(#{joueur.gch}, #{joueur.ctr},#{joueur.drt},#{joueur.off},#{joueur.def},#{@couleur[0].couleur1},#{@couleur[0].couleur2},#{joueur.numero},this);")%>
+	<% else %>
+		<%= check_box_tag(joueur.id, joueur.id, false, :disabled => 'true' )%>
+	<% end %>
+<% else %>
+	<%= check_box_tag(joueur.id, joueur.id, false, :onclick=>"addPlayerToField(#{joueur.gch}, #{joueur.ctr},#{joueur.drt},#{joueur.off},#{joueur.def},#{@couleur[0].couleur1},#{@couleur[0].couleur2},#{joueur.numero},this);")%>
+<% end %>
+
+</td>
+
+<td nowrap ALIGN="left" VALIGN ="MIDDLE" class=" <%= couleur_nom %>" ><%= link_to joueur.nom + ' ' + joueur.prenom, joueur %> </td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" class=" <%= couleur_nom %>"> <%= joueur.age %> ans </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.moral %>%"></div><div class="barfiller" style="left:<%= 100-joueur.moral %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.cond %>%"></div><div class="barfiller" style="left:<%= 100-joueur.cond %>%"></div> </td>
+
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.gch %>%"></div><div class="barfiller" style="left:<%= 100-joueur.gch %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.ctr %>%"></div><div class="barfiller" style="left:<%= 100-joueur.ctr %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.drt %>%"></div><div class="barfiller" style="left:<%= 100-joueur.drt %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.off %>%"></div><div class="barfiller" style="left:<%= 100-joueur.off %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.def %>%"></div><div class="barfiller" style="left:<%= 100-joueur.def %>%"></div> </td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" class=" <%= couleur_nom %>"><%=joueur.avgnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" class=" <%= couleur_nom %>"><%=joueur.lastnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" class=" <%= couleur_nom %>"><%=joueur.nbmatch%></td>
+
+</tr>
+<% i = i + 1 %>
+<% end %>
+</table>
+<div align="center">
+<div id="terrain">
+</div>
+</div>
+<div align="right" class="bouton">
+<%= form_tag  '/mon_equipe/valider', :id=>'equipe' do %>
+<% (1..11).each do |i| %>
+	<%=  hidden_field_tag("j_#{i}") %>
+	<%=  hidden_field_tag("jx_#{i}") %>
+	<%=  hidden_field_tag("jy_#{i}") %>
+<% end %>
+<% (1..5).each do |i| %>
+	<%=  hidden_field_tag("r_#{i}") %>
+<% end %>
+<% if current_user %>
+<% if current_team  == params[:id].to_i || request.path == '/' || request.path == "/mon_equipe" %>
+<%= submit_tag  "Valider", {:class => 'bouton',
+						   :onclick=>"valider_form()"} %>
+<% else %>
+<%= submit_tag  "Valider",{:disabled => 'true',
+						   :class => 'bouton'} %>
+<% end %>
+<% end %>
+<%= button_to  "Charger", {},{:disabled => 'true' ,:class => 'bouton'}%>
+<%= button_to  "Enregistrer sous...", {},{:disabled => true,:class => 'bouton'} %>
+
+<% end %>
+</div>
+	</div>

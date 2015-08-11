@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/helpers
+END
+historiques_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/helpers/historiques_helper.rb
+END
+saisons_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/helpers/saisons_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/howtomanagemyfootballteam_howto/!svn/ver/10/howto/app/helpers/application_helper.rb
+END
+staffs_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/helpers/staffs_helper.rb
+END
+divisions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/howtomanagemyfootballteam_howto/!svn/ver/15/howto/app/helpers/divisions_helper.rb
+END
+equipes_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/howtomanagemyfootballteam_howto/!svn/ver/10/howto/app/helpers/equipes_helper.rb
+END
+joueurs_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/howtomanagemyfootballteam_howto/!svn/ver/15/howto/app/helpers/joueurs_helper.rb
+END
+contrats_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/howtomanagemyfootballteam_howto/!svn/ver/11/howto/app/helpers/contrats_helper.rb
+END

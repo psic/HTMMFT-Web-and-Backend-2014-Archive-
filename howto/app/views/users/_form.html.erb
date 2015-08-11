@@ -1,0 +1,11 @@
+<%= form_for @user do |f| %>
+  <% @user.errors.full_messages.each do |msg| %>
+		<p><%= msg %></p>
+	<% end %>
+  Pseudo : <%= f.text_field :login %><BR>
+  Email : <%= f.text_field :email %><BR>
+  Mot de passe : <%= f.password_field :password %><BR>
+  Mot de passe : <%= f.password_field :password_confirmation %> (vérification)<BR>
+  Equipe : <%= f.select(:equipe_id, options_for_select(@equipes_array)) %><BR>
+  <%= f.submit "Valider" %>
+<% end %>

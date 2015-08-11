@@ -1,0 +1,59 @@
+<div  class="class_container" align="center">
+
+<H2><%= link_to @classement[0].nom, :controller=>'divisions', :action=>'list', :id=>@classement[0].divID %></H2>
+
+<table class="classement_tab">
+<tr>
+<th>
+</th>
+<th>
+Pts
+</th>
+<th>
+J
+</th>
+<th>
+V | N | D
+<th>
++ | -
+</th>
+<th>
+&plusmn;
+</th>
+</tr>
+<% i=1 %>
+<% @classement.each do |equipe| %>
+<% if (i % 2 == 1) %>
+<% @classe = "impaire" %>
+<% else %>
+<% @classe = "paire" %>
+<% end %>
+<% if equipe.equipeID == @equipe %>
+<tr class ="mon_equipe">
+<% else %>
+<tr class ="<%= @classe %>">
+<% end %>
+<td class="classement_tab" align="left">
+<%= i %>.<%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %>
+</td>
+<td class="classement_tab"align="center">
+<%= equipe.points %>
+</td>
+<td class="classement_tab" align="center">
+<%= equipe.nb_journee %>
+</td>
+<td class="classement_tab" align="center">
+<%= equipe.victoire %>|<%= equipe.nul %>|<%= equipe.defaite %>
+</td>
+<td class="classement_tab"align="center">
+<%= equipe.bp %>|<%= equipe.bc %>
+</td>
+<td class="classement_tab"align="right">
+<%= equipe.bp - equipe.bc %>
+</td>
+</tr>
+<% i = i + 1 %>
+<% end %>
+
+</table>
+</div>

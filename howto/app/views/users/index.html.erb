@@ -1,0 +1,10 @@
+  <h1><%=current_user.login%> </h1>
+  <% if current_user %>
+      <%= current_user.email %><BR>
+       Date de création : <%= current_user.created_at %><BR>
+       Nombre de connexion : <%= current_user.login_count %><BR>
+        Date de la dernière connexion : <%= current_user.last_login_at %><BR>
+    <% else %>
+      <p><%= link_to "Connexion", new_user_session_path %></p>
+      <p><%= link_to "S'inscrire", new_user_path %></p>
+    <% end %>

@@ -1,0 +1,40 @@
+<H1>Report</H1>
+<table>
+<tr>
+<td>
+<div class="report">
+<H2>Bugs</H2>
+Signaler un bug! Et je vous répondrais...
+<%= form_tag({:action => "post_bug", :method => "post"},{:class => "report_form"}) do %>
+  <%= label_tag("bug", "Bug : ") %><BR>
+  <%= text_area_tag("bug","",:size => "47x15") %><BR>
+  <%= submit_tag("Signaler") %>
+<% end %>
+<%= @bug.html_safe %>
+</div>
+</td>
+<td>
+<div class="report">
+<H2>Livre d'or</H2>
+Donner vos impressions...ou pas.
+<%= form_tag({:controller =>"report", :action => "post_LO", :method => "post"},{:class => "report_form"}) do %>
+  <%= label_tag("lo", "Commentaire : ") %><BR>
+  <%= text_area_tag("lo","",:size => "47x15") %><BR>
+  <%= submit_tag("Commenter") %>
+<% end %>
+<%= @lo.html_safe %>
+</div>
+</td>
+<td>
+<div class="report">
+<H2>Fonctionnalité</H2>
+Une fonctionnalité à ajouter, à améliorer, discutons en.
+<%= form_tag({:controller =>"report", :action => "post_func", :method => "post"},{:class => "report_form"}) do %>
+  <%= label_tag("func", "Fonctionnalité : ") %><BR>
+  <%= text_area_tag("func","",:size => "47x15") %><BR>
+  <%= submit_tag("Discuter") %>
+<% end %>
+<%= @func.html_safe %>
+</div>
+</td>
+</table>

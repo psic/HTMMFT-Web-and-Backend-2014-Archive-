@@ -1,0 +1,12 @@
+<h1>Editing saison</h1>
+
+<% form_for(@saison) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @saison %> |
+<%= link_to 'Back', saisons_path %>

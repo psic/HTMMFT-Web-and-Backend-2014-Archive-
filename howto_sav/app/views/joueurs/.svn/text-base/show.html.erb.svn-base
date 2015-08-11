@@ -1,0 +1,101 @@
+<H1><%= @joueur.nom  %>, <%= @joueur.prenom  %> (<%= @joueur.age %> ans)</H1>
+<H2><%=  @joueur.equipes[0].nom  %></H2>
+<div class="joueur">
+<table class="joueur" border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>XP</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.xp %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.xp %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Mental</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.mental %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.mental %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Moral</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.moral %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.moral %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Condition</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.condition %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.condition %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Talent</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.talent %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.talent %>%"></div> </td>
+	</tr>
+</table>
+</div>
+<div class="joueur">
+<table class="joueur" border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Tactique</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.tactique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.tactique %>%"></div> </td>
+	</tr>
+	<tr>
+		<td>Technique</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.technique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.technique %>%"></div> </td>
+	</tr>
+	<tr>
+		<td>Physique</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.physique %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.physique %>%"></div> </td>
+	</tr>
+	<tr>
+		<td>Vitesse</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.vitesse %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.vitesse %>%"></div> </td>
+	</tr>
+</table>
+</div>
+<div>
+<table border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Offensif</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.off %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.off %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Defensif</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.def %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.def %>%"></div> </td>
+	</tr>
+	<tr>	
+		<td>Gauche</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.gch %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.gch %>%"></div> </td>
+	</tr>
+	<tr>
+		<td>Centre</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.ctr %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.ctr %>%"></div> </td>
+	</tr>
+	<tr>
+		<td>Droit</td>
+		<td class="graph_joueur" ALIGN="left" VALIGN ="MIDDLE"><div class="bar_joueur" style="width:<%= @joueur.drt %>%"></div><div class="barfiller_joueur" style="left:<%= 100-@joueur.drt %>%"></div> </td>
+	</tr>
+</table>
+</div>
+<div class="joueur">
+<table border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Transfert ?</td>
+		<td>Pret ?</td>
+		<td>Blessure ?</td>
+	</tr>
+	<tr>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.liste_transfert %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.liste_pret %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.blessure %></td>
+	</tr>
+</table>
+</div>
+<div>
+<table border="1" cellspacing="10" cellpadding="20" ALIGN="center" VALIGN ="MIDDLE">
+	<tr>
+		<td>Date début (mm/aa)</td>
+		<td>Date Fin (mm/aa)</td>
+		<td>Durée</th>
+		<td>Salaire</td>
+	</tr>
+	<tr>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].mois_debut %> / <%= @joueur.contrats[0].anne_debut %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].mois_fin %> / <%= @joueur.contrats[0].anne_fin %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].duree %></td>
+		<td ALIGN="center" VALIGN ="MIDDLE"><%= @joueur.contrats[0].salaire %></td>
+	</tr>
+</table>
+</div>
+

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/console
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/server
+END
+dbconsole
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/dbconsole
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/script/plugin
+END

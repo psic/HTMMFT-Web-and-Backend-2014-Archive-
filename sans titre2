@@ -1,0 +1,161 @@
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote, (
+SELECT stats.note AS lastnote
+FROM stats, joueurs
+WHERE stats.id_joueur = joueurs.id
+ORDER BY stats.id DESC
+LIMIT 1
+) AS lastnote
+FROM joueurs,stats
+WHERE stats.id IN (SELECT id FROM view_stats 
+WHERE id_joueur =1400)
+GROUP BY joueurs.id
+ORDER BY joueurs.numero
+
+
+SELECT  count( view_stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote, (
+SELECT stats.note AS lastnote
+FROM stats, joueurs
+WHERE stats.id_joueur = joueurs.id
+ORDER BY stats.id DESC
+LIMIT 1
+) AS lastnote
+FROM stats
+
+SELECT `ballon+` AS bp, `ballon-` AS bm, `passe+` AS pp, `passe-` AS pm, `drible+` AS dp, `drible-` AS dm, `tackle+` AS tcp, `tackle-` AS tcm, `tir+` AS trp, `tir-` AS trm, but, id_joueur, note, matchs.num_journee
+									FROM  stats, matchs,feuilles_de_matchs
+									WHERE  stats.id_joueur = 1400
+									AND ( stats.id = feuilles_de_matchs.stats_j1_id
+										  OR stats.id = feuilles_de_matchs.stats_j2_id
+										  OR stats.id = feuilles_de_matchs.stats_j3_id
+										  OR stats.id = feuilles_de_matchs.stats_j4_id
+										  OR stats.id = feuilles_de_matchs.stats_j5_id
+										  OR stats.id = feuilles_de_matchs.stats_j6_id
+										  OR stats.id = feuilles_de_matchs.stats_j7_id
+										  OR stats.id = feuilles_de_matchs.stats_j8_id
+										  OR stats.id = feuilles_de_matchs.stats_j9_id
+										  OR stats.id = feuilles_de_matchs.stats_j10_id
+										  OR stats.id = feuilles_de_matchs.stats_j11_id)
+									  AND ( feuilles_de_matchs.id =matchs.fdm_equipe1 
+										OR feuilles_de_matchs.id =matchs.fdm_equipe2)
+										
+										
+SELECT `ballon+` AS bp, `ballon-` AS bm, `passe+` AS pp, `passe-` AS pm, `drible+` AS dp, `drible-` AS dm, `tackle+` AS tcp, `tackle-` AS tcm, `tir+` AS trp, `tir-` AS trm, but, id_joueur, note, matchs.num_journee
+									FROM  stats, matchs,equipes, contrats, joueurs
+									WHERE  stats.id_joueur = 1400
+									AND equipes.id = contrats.equipe_id
+									AND joueur.id = contrats.joueur_id
+									AND (matchs.equipe1_id = equipes.id OR
+										matchs.equipe2_id = equipes.id)
+										
+SELECT * from feuilles_de_matchs, matchs
+WHERE feuilles_de_matchs.id NOT IN (SELECT matchs.fdm_equipe1 from matchs)
+
+SELECT *
+FROM feuilles_de_matchs
+LEFT OUTER JOIN matchs ON feuilles_de_matchs.id = matchs.id
+WHERE matchs.id IS NULL
+
+DELETE FROM  feuilles_de_matchs  WHERE id IN (SELECT * FROM ( SELECT ff.id
+FROM feuilles_de_matchs as ff
+LEFT OUTER JOIN matchs ON ff.id = matchs.id
+WHERE matchs.id IS NULL) as tmp)
+
+SELECT *
+FROM stats
+LEFT OUTER JOIN feuilles_de_matchs ON stats.id = feuilles_de_matchs.stats_j1_id
+WHERE feuilles_de_matchs.id IS NULL
+
+
+DELETE FROM  stats  WHERE id IN (SELECT * FROM ( SELECT id
+FROM stats
+LEFT OUTER JOIN feuilles_de_matchs ON stats.id = feuilles_de_matchs.stats_j1_id
+WHERE feuilles_de_matchs.id IS NULL) as tmp) ---> FAUX
+
+SELECT *
+FROM stats
+WHERE stats.id_joueur =1164
+AND id NOT
+IN (
+
+SELECT stats.id
+FROM stats, matchs, feuilles_de_matchs
+WHERE stats.id_joueur =1164
+AND (
+stats.id = feuilles_de_matchs.stats_j1_id
+OR stats.id = feuilles_de_matchs.stats_j2_id
+OR stats.id = feuilles_de_matchs.stats_j3_id
+OR stats.id = feuilles_de_matchs.stats_j4_id
+OR stats.id = feuilles_de_matchs.stats_j5_id
+OR stats.id = feuilles_de_matchs.stats_j6_id
+OR stats.id = feuilles_de_matchs.stats_j7_id
+OR stats.id = feuilles_de_matchs.stats_j8_id
+OR stats.id = feuilles_de_matchs.stats_j9_id
+OR stats.id = feuilles_de_matchs.stats_j10_id
+OR stats.id = feuilles_de_matchs.stats_j11_id
+)
+AND (
+feuilles_de_matchs.id = matchs.fdm_equipe1
+OR feuilles_de_matchs.id = matchs.fdm_equipe2
+)
+)
+
+
+
+
+
+SELECT *
+FROM stats
+WHERE id NOT
+IN (
+
+SELECT stats.id
+FROM stats, matchs, feuilles_de_matchs
+WHERE (
+stats.id = feuilles_de_matchs.stats_j1_id
+OR stats.id = feuilles_de_matchs.stats_j2_id
+OR stats.id = feuilles_de_matchs.stats_j3_id
+OR stats.id = feuilles_de_matchs.stats_j4_id
+OR stats.id = feuilles_de_matchs.stats_j5_id
+OR stats.id = feuilles_de_matchs.stats_j6_id
+OR stats.id = feuilles_de_matchs.stats_j7_id
+OR stats.id = feuilles_de_matchs.stats_j8_id
+OR stats.id = feuilles_de_matchs.stats_j9_id
+OR stats.id = feuilles_de_matchs.stats_j10_id
+OR stats.id = feuilles_de_matchs.stats_j11_id
+)
+AND (
+feuilles_de_matchs.id = matchs.fdm_equipe1
+OR feuilles_de_matchs.id = matchs.fdm_equipe2
+)
+)
+
+================Bien mais pas indispensable....et peut être faux
+DELETE FROM  feuilles_de_matchs  WHERE id IN (SELECT * FROM ( SELECT ff.id
+FROM feuilles_de_matchs as ff
+LEFT OUTER JOIN matchs ON ff.id = matchs.id
+WHERE matchs.id IS NULL) as tmp)
+
+
+================================== c'est ça qu'il faut faire.
+DELETE FROM  stats  WHERE id NOT IN (SELECT * FROM (SELECT stats.id
+FROM stats, matchs, feuilles_de_matchs
+WHERE (
+stats.id = feuilles_de_matchs.stats_j1_id
+OR stats.id = feuilles_de_matchs.stats_j2_id
+OR stats.id = feuilles_de_matchs.stats_j3_id
+OR stats.id = feuilles_de_matchs.stats_j4_id
+OR stats.id = feuilles_de_matchs.stats_j5_id
+OR stats.id = feuilles_de_matchs.stats_j6_id
+OR stats.id = feuilles_de_matchs.stats_j7_id
+OR stats.id = feuilles_de_matchs.stats_j8_id
+OR stats.id = feuilles_de_matchs.stats_j9_id
+OR stats.id = feuilles_de_matchs.stats_j10_id
+OR stats.id = feuilles_de_matchs.stats_j11_id
+)
+AND (
+feuilles_de_matchs.id = matchs.fdm_equipe1
+OR feuilles_de_matchs.id = matchs.fdm_equipe2
+)
+)
+as tmp)
+

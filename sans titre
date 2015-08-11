@@ -1,0 +1,111 @@
+SELECT joueurs . * , count( stats.id_joueur ) , avg( stats.note )
+FROM joueurs, stats
+WHERE joueurs.id = stats.id_joueur
+AND joueurs.id =230
+
+
+SELECT joueurs. * , count( stats.id_joueur ) , avg( stats.note ) , (
+
+SELECT stats.note AS lastnote
+FROM stats
+WHERE stats.id_joueur =230
+ORDER BY id DESC
+LIMIT 1
+) AS lastnote
+FROM joueurs, stats
+WHERE joueurs.id = stats.id_joueur
+AND joueurs.id =230
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE joueurs.id = stats.id_joueur
+AND equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+ORDER BY joueurs.numero
+LIMIT 0 , 30
+
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE joueurs.id = stats.id_joueur
+AND equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+UNION (
+SELECT joueurs. * , 0 AS nbmatch, 0 AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+)
+LIMIT 0 , 30
+
+
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE joueurs.id = stats.id_joueur
+AND equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+UNION (
+SELECT joueurs. * , 0 AS nbmatch, 0 AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+EXCEPT (
+SELECT joueurs. * , 0 AS nbmatch, 0 AS avgnote
+FROM joueurs, stats, equipes, contrats
+WHERE joueurs.id = stats.id_joueur
+AND equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+)
+)
+GROUP BY joueurs.id
+
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote
+FROM joueurs LEFT OUTER JOIN stats ON joueurs.id = stats.id_joueur , equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+
+FROM TGauche LEFT OUTER JOIN TDroite ON condition de jointure
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote,
+(SELECT stats.note AS lastnote
+FROM joueurs LEFT OUTER JOIN stats ON joueurs.id = stats.id_joueur , equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+ORDER BY id DESC
+LIMIT 1
+) AS lastnote
+FROM joueurs LEFT OUTER JOIN stats ON joueurs.id = stats.id_joueur , equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+
+SELECT joueurs. * , count( stats.id_joueur ) AS nbmatch, avg( stats.note ) AS avgnote, (
+
+SELECT stats.note AS lastnote
+FROM stats, joueurs
+WHERE stats.id_joueur = joueurs.id
+ORDER BY stats.id DESC
+LIMIT 1
+) AS lastnote
+FROM joueurs
+LEFT OUTER JOIN stats ON joueurs.id = stats.id_joueur, equipes, contrats
+WHERE equipes.id =1
+AND equipes.id = contrats.equipe_id
+AND contrats.joueur_id = joueurs.id
+GROUP BY joueurs.id
+ORDER BY joueurs.numero

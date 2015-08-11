@@ -1,0 +1,20 @@
+<H1><%= @club.equipe.nom %></H1>
+
+  <strong>President :</strong>
+  <%= @club.president %>
+  <BR>
+  <strong>Stade :</strong>
+  <%= @club.stade %> ( <%= @club.capacite_stade %> places )
+  <BR>
+  <strong>$ :</strong>
+  <%= @club.argent %> 
+  <BR>
+  <strong>Centre de formation :</strong>
+  <%= @club.centre_de_formation %> 
+  <BR>
+  <strong>Couleur :</strong><BR>
+  <svg id="couleur" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="720px" height="450px">
+    <circle cx="25" cy="25" r="22" fill="hsl(<%=@couleur[0].couleur1%>,50%,50%)"  stroke-width="6" stroke="hsl(<%=@couleur[0].couleur2 %>,50%,50%)"/>
+</svg>
+  

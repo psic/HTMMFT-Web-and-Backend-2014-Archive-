@@ -1,0 +1,2 @@
+find . -type f -name \*.rb -print | xargs grep "num_journee"
+

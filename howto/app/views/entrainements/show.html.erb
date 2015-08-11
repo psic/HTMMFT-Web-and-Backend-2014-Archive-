@@ -1,0 +1,210 @@
+<div id="menu">
+			<ul id="onglets">
+			<li id ="icon_terrain"><%= link_to (image_tag 'icone_terrain.png'), '/' %></li>
+
+<%if not current_user %>		
+			<li ><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %> / Démo</H1></li>
+			<li><H1><a href="">Transferts</a></H1> (non disponible en démo)</li>
+			<li><H1><a href="">Entrainement</a></H1> (non disponible en démo)</li>
+<% else %>
+		<% if @login.empty?  %>
+			<li><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %></H1></li>				
+		<% else %>		
+			<li><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %></H1></li>
+		<% end %>
+		<% if current_team  == params[:id].to_i || request.path == '/' || request.path == "/mon_equipe" %>
+			<li><H1><%= link_to 'Transferts', :controller=>'transferts', :action=>'show', :id=>@club.equipe.id %></H1></li>
+			<li class="active"><H1><%= link_to 'Entrainement', :controller=>'entrainements', :action=>'show', :id=>@club.equipe.id %></H1></li>
+		<% else %>
+			<li><H1>Transferts</H1> (non disponible)</li>
+			<li><H1>Entrainement</H1> (non disponible)</li>
+		<% end %>	
+		 
+		
+<% end %>
+  </ul>
+</div>		
+<div class = "equipe">
+
+<div id="top">
+			<p>Ah l'entrainement de son équipe, tout un programme. Justement quel sera le programme d'entrainement de votre équipe jusqu'au prochain match ? 
+			Ce programme détermine les bonus qui seront accordés à votre équipe pour le prochain match. Attention, la charge totale d'entrainement maximale est de 
+			<strong>20</strong>. Et plus votre équipe travaille dur à l'entrainement, plus ses joueurs seront fatigués... à vous de trouver le bon équilibre.</p> 
+			<p>Le travail de certaines qualités aura un effet à long terme, d'autres qualités travaillées se répercuteront uniquement sur le prochain match. De plus, 
+			certains entrainements pour une qualité peuvent avoir un effet négatif pour une autre. Enfin, ne négligez pas la récupération de vos joueurs qui est 
+			le meilleur moyen de les voir retrouver leur meilleur forme physique.</p>
+			<p><strong>On parle ici de bonus pour le ou les prochains matchs à venir, il n'y a pas d'amélioration des statistiques des joueurs de prévues (pour l'instant).</strong></p>
+		</div>
+
+
+<div id="physique" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icon_for1.png",:alt => "force",:title=>"force", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="physique" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="physique" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="physique" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="physique" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="physique" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="physique" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="physique" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="physique" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="physique" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="physique" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="physique" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="vitesse" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icon_vit2.gif", :alt => "vitesse",:title=>"vitesse", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="vitesse" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="vitesse" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="vitesse" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="vitesse" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="vitesse" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="vitesse" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="vitesse" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="vitesse" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="vitesse" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="vitesse" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="vitesse" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="technique" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icon_tec2.png", :alt => "technique",:title=>"technique", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="technique" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="technique" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="technique" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="technique" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="technique" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="technique" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="technique" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="technique" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="technique" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="technique" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="technique" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="tactique" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icon_tac2.png", :alt => "tactique",:title=>"tactique", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="tactique" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="tactique" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="tactique" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="tactique" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="tactique" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="tactique" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="tactique" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="tactique" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="tactique" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="tactique" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="tactique" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="attaque" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icone_terrain_off.png", :alt => "offensif",:title=>"zone offensive", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="attaque" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="attaque" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="attaque" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="attaque" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="attaque" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="attaque" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="attaque" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="attaque" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="attaque" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="attaque" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="attaque" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="defense" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+<%= image_tag "icone_terrain_def.png", :alt => "defensif",:title=>"zone défensive", :class => 'stats' %>
+</td>
+<td>
+<INPUT type=radio name="defense" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="defense" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="defense" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="defense" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="defense" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="defense" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="defense" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="defense" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="defense" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="defense" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="defense" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+<div id="recup" class="entrainement">
+<table>
+<tr>
+<td width="100px" ALIGN="center">
+Récup
+</td>
+<td>
+<INPUT type=radio name="recup" value="0"  onclick="Update_entrainement();" checked/>0
+<INPUT type=radio name="recup" value="1"  onclick="Update_entrainement();" />1
+<INPUT type=radio name="recup" value="2"  onclick="Update_entrainement();" />2
+<INPUT type=radio name="recup" value="3"  onclick="Update_entrainement();" />3
+<INPUT type=radio name="recup" value="4"  onclick="Update_entrainement();" />4
+<INPUT type=radio name="recup" value="5"  onclick="Update_entrainement();" />5
+<INPUT type=radio name="recup" value="6"  onclick="Update_entrainement();" />6
+<INPUT type=radio name="recup" value="7"  onclick="Update_entrainement();" />7
+<INPUT type=radio name="recup" value="8"  onclick="Update_entrainement();" />8
+<INPUT type=radio name="recup" value="9"  onclick="Update_entrainement();" />9
+<INPUT type=radio name="recup" value="10"  onclick="Update_entrainement();"/>10
+</td>
+</tr>
+</table>
+</div>
+
+
+<div style="padding-left:350px;padding-bottom:300px; padding-top:20px;">
+<H2 style="float:left; padding-right:20px;">Total  <span id=total>0</span>  </H2>
+<%= form_tag  '/entrainements/valider', :id=>'equipe' do %>
+<%= submit_tag  "Valider", {:class => 'bouton',
+						   :onclick=>"valider_entrainement()"} %>
+<%end%>
+</div>
+</div>
+

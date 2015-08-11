@@ -1,0 +1,132 @@
+body { background-color: #5B8218; color: white; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  background-color: #5B8218;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+h1,h2 {color : #022567;}
+a { color: white; 
+	text-decoration:none; }
+a:visited { color: #2A4212; }
+a:hover { color: #012CDA; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#header {
+ color:white;
+ background-color:#5B8218;
+ background-image:url(bandeau.jpg);
+ background-repeat:no-repeat;
+ top: 0px;
+ //left: 0px;
+ //position: relative;
+ margin:0 auto;
+ width: 900px;
+ height: 100px;
+}
+
+#header h1 {
+ color:white;
+ font-size: 30px;
+ font-family: "Times New Roman";
+ padding-top:4px;
+ padding-left:3px;
+}
+
+#header h2 {
+ color:white;
+ font-size: 24px;
+ font-family: "Times New Roman";
+}
+
+#global{
+margin-left:auto;
+margin-right:auto;
+position:relative;
+width:1200px;
+min-height:100%;
+}
+
+table {
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    border-collapse:collapse;
+    margin: 5px;
+}
+td {
+    padding: 5px;
+    border: 1px solid #d0d0d0;
+}
+td.graph {
+    width: 100px;
+    background: #5B8218;
+}
+td.graph .bar {
+    background: #4291ea;
+    height: 10px;
+    float:left;
+    
+}
+td.graph .barfiller {
+    background: #022567;
+    height: 10px;
+}
+
+td.graph_joueur {
+    width: 200px;
+    background: #5B8218;
+}
+td.graph_joueur .bar_joueur {
+    background: #4291ea;
+    height: 15px;
+    float:left;   
+}
+td.graph_joueur .barfiller_joueur {
+    background: #022567;
+    height: 15px;
+} 
+.joueur{
+float:left;
+}

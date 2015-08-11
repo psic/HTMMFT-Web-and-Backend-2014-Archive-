@@ -1,0 +1,129 @@
+
+<div class="club_info">
+  
+
+<div id="top" align="center">
+
+<strong> Classement des buteurs de la division </strong><BR/>
+<% unless @topbut.empty? %>
+	<% i=1%>
+	<table>
+	<% @topbut.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= joueur.buts.to_i.to_s + ' buts en ' + joueur.count.to_i.to_s + ' mchs (' + number_with_precision(joueur.avgbuts, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' but/mch)'  %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de buteur pour cette division
+<%end%>
+
+<BR/>
+
+
+<strong> Classement des meilleurs tireurs de la division </strong><BR/>
+<% unless @toptir.empty? %>
+	<% i=1%>
+	<table>
+	<% @toptir.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= number_with_precision(joueur.avgbuts, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' cadrés/mch (' + joueur.buts.to_i.to_s + '/' + joueur.count.to_i.to_s + ')'   %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de tir réussi pour votre équipe
+<%end%>
+<BR/>
+
+
+<strong> Classement des meilleurs dribbleurs de la division </strong><BR/>
+<% unless @topdrible.empty? %>
+	<% i=1%>
+	<table>
+	<% @topdrible.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= number_with_precision(joueur.avgdrible, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' réussis/mch (' + joueur.drible.to_i.to_s + '/' + joueur.count.to_i.to_s + ')'   %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de dribble réussi pour cette division
+<%end%>
+
+<BR/>
+
+<strong> Classement des meilleurs tackleurs de la division </strong><BR/>
+<% unless @toptackle.empty? %>
+	<% i=1%>
+	<table>
+	<% @toptackle.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= number_with_precision(joueur.avgtackle, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' réussis/mch (' + joueur.tackle.to_i.to_s + '/' + joueur.count.to_i.to_s + ')'   %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de tackle réussi pour cette division
+<%end%>
+<BR/>
+
+<strong> Classement des meilleurs passeurs de la division </strong><BR/>
+<% unless @toppasse.empty? %>
+	<% i=1%>
+	<table>
+	<% @toppasse.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= number_with_precision(joueur.avgpasse, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' réussies/mch (' + joueur.passe.to_i.to_s + '/' + joueur.count.to_i.to_s + ')'   %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de passe réussie pour cette division
+<%end%>
+
+<BR/>
+
+<strong> Classement des gagneurs de ballon de la division </strong><BR/>
+<% unless @topballon.empty? %>
+		<% i=1%>
+	<table>
+	<% @topballon.each do |joueur| %>
+		<tr>
+		<td><%= i.to_s %> </td>
+		<td><%= link_to joueur.nom + ' ' + joueur.prenom + ', n° ' + joueur.numero.to_s, :controller=>'joueurs', :action=>'show', :id=>joueur.id %></td>
+		<td><%= number_with_precision(joueur.avgballon, :precision => 2, :strip_insignificant_zeros =>true).to_s + ' gagnés/mch (' + joueur.ballon.to_i.to_s + '/' + joueur.count.to_i.to_s + ')'   %></td>
+		<td>joue pour <%= joueur.equipe %></td>
+		</tr>
+	<% i=i+1 %>
+	<%end%>
+	</table>
+<%else%>
+	Pas de ballon gagné pour votre équipe
+<%end%>
+<BR/>
+
+
+</div>
+</div>
+

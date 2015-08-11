@@ -1,0 +1,39 @@
+
+<% if current_user %>
+	<% if not params[:id]
+	  @equipe = current_team
+   else
+	 @equipe = params[:id].to_i
+   end
+	%>
+	<div class="menu">
+	<table>
+	<tr>
+    <td><%= link_to current_user.login,:controller=>'users' %></td>
+    <td>|</td>
+    <td><%= link_to '*', :controller=>'report' %></td>
+    <td>|</td>
+    <td><%= link_to '?', :controller=>'howto' %></td>
+    <td>|</td>
+     <td><%= link_to '@', :controller=>'divisions', :id=>@equipe %></td>
+    <td>|</td>
+    <td><%= link_to "Disconnect", logout_path %></td>
+	</tr>
+	</table>
+	</div>
+
+<% else %>
+	<div class="laligne">
+     <%= link_to "Inscription", {:controller=>'users', :action=>'new'}, {:style =>"font-family: Times New Roman;font-size:22px;vertical-align:middle;margin-bottom:0px;margin-right:10px;font-weight:300;"} %>
+    <%= form_for @user_session, :controller=>'user_session', :action=>'create' do |f|  %>
+       <% @user_session.errors.full_messages.each do |msg| %>
+		<p><%= msg %></p>
+		<% end %>
+        <%= f.text_field :login, :value=>'pseudo',:size => 15 %>
+        <%= f.password_field :password, :value=>'password',:size => 15 %>
+        <%= f.check_box :remember_me, {:style =>"margin-top:3px;"} %>
+		<%= f.submit "Connect", {:style =>"vertical-align:top;"} %>
+    <% end %>
+    <%= link_to '?', {:controller=>'howto'}, {:style =>"font-family: Times New Roman;font-size:25px;font-weight:300;vertical-align:middle; "} %>
+    </div>
+<% end %>

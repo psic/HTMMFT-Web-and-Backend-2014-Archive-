@@ -1,0 +1,79 @@
+<h1>Inscription</h1>
+<%= render :partial => 'form' %>
+<h2>Notice & Conditions d'utilisation</h2>
+<p>L'adresse mail que vous indiquée doit être consultée réguliérement. Elle sera utilisée pour vous communiquer les résultats de votre équipe et des informations 
+sur le site, le jeu et son évolution. De plus, elle sera visible des autres joueurs du site pour communiquer avec vous, et, dans un futur proche, sera utile pour
+les négociations et les transferts entre équipes et joueurs. Je décline toute résponsabilité quant au contenu des messages provenant des autres joueurs du site.
+En validant votre inscription vous acceptez ces conditions d'utilisation. Créez votre tactique, séléctionnez les bon joueurs, un match a lieu tout les 3, 4 jours
+</p><p>Bon jeu et bon matchs!</p>
+<div>
+<h2>Divisions & Joueurs</h2>
+
+<ul>
+<li>Nord
+<ul>
+<% @divisionN.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Nord-Est
+<ul>
+<% @divisionNE.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Est
+<ul>
+<% @divisionE.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Sud-Est
+<ul>
+<% @divisionSE.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Sud
+<ul>
+<% @divisionS.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %>  </li>
+<% end %>
+</ul>
+</li>
+
+<li>Sud-Ouest
+<ul>
+<% @divisionSO.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Ouest
+<ul>
+<% @divisionO.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+<li>Nord-Ouest
+<ul>
+<% @divisionNO.each do |equipe| %>
+    <li><%= link_to equipe.equipe, :controller=>'equipes', :action=>'show', :id=>equipe.equipeID %> est jouée par <%= equipe.login %> </li>
+<% end %>
+</ul>
+</li>
+
+</ul>
+</div>
+<a href="http://www.jeu-gratuit.net" target="_blank"><img src="http://www.jeu-gratuit.net/images/ban_jg_88x31_fix.png" border="0" alt="jeux en ligne" /></a>

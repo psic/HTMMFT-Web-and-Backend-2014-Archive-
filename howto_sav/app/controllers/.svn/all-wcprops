@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/controllers
+END
+equipes_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/howtomanagemyfootballteam_howto/!svn/ver/15/howto/app/controllers/equipes_controller.rb
+END
+joueurs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/howtomanagemyfootballteam_howto/!svn/ver/15/howto/app/controllers/joueurs_controller.rb
+END
+contrats_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/howtomanagemyfootballteam_howto/!svn/ver/11/howto/app/controllers/contrats_controller.rb
+END
+historiques_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/controllers/historiques_controller.rb
+END
+saisons_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/controllers/saisons_controller.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/controllers/application.rb
+END
+staffs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/app/controllers/staffs_controller.rb
+END
+divisions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/howtomanagemyfootballteam_howto/!svn/ver/15/howto/app/controllers/divisions_controller.rb
+END

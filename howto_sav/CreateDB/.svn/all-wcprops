@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/howtomanagemyfootballteam_howto/!svn/ver/7/CreateDB
+END
+CreateDB.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/CreateDB.sh
+END
+Staff.log
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/Staff.log
+END
+init.log
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/init.log
+END
+initDB.pl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/initDB.pl
+END
+stadium.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/stadium.txt
+END
+city.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/city.txt
+END
+CreateDB.log
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/CreateDB.log
+END
+createMatch.pl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/howtomanagemyfootballteam_howto/!svn/ver/5/CreateDB/createMatch.pl
+END
+createEquipeClub.pl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/howtomanagemyfootballteam_howto/!svn/ver/5/CreateDB/createEquipeClub.pl
+END
+name.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/name.txt
+END
+howto.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/5/CreateDB/howto.sql
+END
+createStaff.pl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/howtomanagemyfootballteam_howto/!svn/ver/5/CreateDB/createStaff.pl
+END
+.match.log.swo
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/.match.log.swo
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/database.yml
+END
+Club.log
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/Club.log
+END
+firstname.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/firstname.txt
+END
+createJoueur.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/createJoueur.pl
+END
+createMatch2.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/createMatch2.pl
+END
+Joueurs.log
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/howtomanagemyfootballteam_howto/!svn/ver/5/CreateDB/Joueurs.log
+END
+Match.log
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/6/CreateDB/Match.log
+END
+createMatch3.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/howtomanagemyfootballteam_howto/!svn/ver/1/CreateDB/createMatch3.pl
+END

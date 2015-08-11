@@ -1,0 +1,391 @@
+<div class="warning">
+<ul>
+<li>Pour profiter du jeu, il faut absolument un navigateur supportant le SVG. Opera le fait très bien, les autres c'est moins sur.</li>
+<li>J'ai absolument besoin de vous, vos retour, vos avis, alors écrivez moi : <%= mail_to "webmaster@howtomanagemyfootballteam.com", nil, :replace_at => "_at_", :replace_dot => "_dot_" %>.</li>
+<li>Ceci est une béta version, il se peut qu'a tout moment, la base de donnée du jeux soit réinitialisée, les équipes recrées, et votre compte désactivé.</li>
+</ul>
+Pour suivre l'actualité du site, voir les annonces de matchs et discuter de ce qui pourrait être amélioré, rendez vous sur <a href="http://www.facebook.com/Howtomanagemyfootballteamcom">Facebook</a>
+</div>
+
+
+<H1 id="howto">How to...</H1>
+
+<div class="sommaire">
+<H2><a href="#1">I. How quoi ? Manage quoi? C'est quoi donc ?</a></H2>
+<H3><a href="#1.1">I.1. Génèse</a></H3>
+<H3><a href="#1.2">I.2. L'esprit</a></H3>
+
+<H2><a href="#2">II. Le comment ça marche</a></H2>
+<H3><a href="#2.1">II.1. Principes généraux et organisation</a></H3>
+<H3><a href="#2.2">II.2. Les joueurs</a></H3>
+<H3><a href="#2.3">II.3. Faire son équipe</a></H3>
+<H4><a href="#2.3.1">II.3.1. Ajouter un joueur à la feuille de match</a></H4>
+<H4><a href="#2.3.2">II.3.2. Sélectionner et déplacer un joueur</a></h4>
+<h4><a href="#2.3.3">II.3.3. Enregistrer sa tactique</a></h4>
+<h4><a href="#2.3.4">II.3.4. Jour de match</a></h4>
+<h3><a href="#2.4">II.4. L'après match</a></h3>
+<h4><a href="#2.4.1">II.4.1. Les résultats</a></h4>
+<h4><a href="#2.4.2">II.4.2. Les statisiques</a></h4>
+
+<H2><a href="#3">III. Navigation</a></H2>
+<H3><a href="#3.1">III.1. L'écran d'accueil</a></H3>
+<H3><a href="#3.2">III.2. Inscription</a></h3>
+<H3><a href="#3.3">III.3. Connexion</a></h3>
+<H3><a href="#3.4">III.4. Les autres pages</a></h3>
+
+<H2><a href="#4">IV. FAQ</a></H2>
+<H3><a href="#4.1">IV.1. C'est qui le responsable</a></H3>
+<H3><a href="#4.2">IV.2. Comment sont "calculés" les matchs</a></H3>
+<H3><a href="#4.3">IV.3. C'est au pif ton truc là ?</a></H3>
+<H3><a href="#4.4">IV.4. C'est où les transferts ?</a></H3>
+<H3><a href="#4.5">IV.5. Il n'y a pas de statistiques de gardien ?</a></H3>
+<H2><a href="#5">V. Remerciements</a></H2>
+<H2><a href="#6">VI. Les TODO</a></H2>
+</div>
+
+
+
+<H2 id="1">I. How quoi ? Manage quoi? C'est quoi donc ?</H2>
+
+<p>Une fois inscrit, vous allez prendre en main le destin d'un équipe en tant qu'entraineur. A vous de faire la composition d'équipe et d'élaborer la 
+meilleur tactique pour battre vos adversaires. Les matchs se dérouleront une fois par jour.</p>
+
+<H3 id="1.1">I.1. Génèse</H3>
+<p>Comme vous pouvez vous en douter, ce site est le fruit du travail d'un seul bonhomme pendant son temps libre. 
+Si je le fais, c'est que c'est un projet de longue date, resté dans des cartons et construit à partir de notes vieilles de dix ans d'age
+ pour les plus anciennes. Je suis joueur des jeux de gestion footballistique ou jeux de management depuis le début du genre, et j'avais envie
+ de faire un truc à moi, à ma sauce, avec ma vision de ce type de jeux.</p>
+
+<H3 id="1.2">I.2. L'esprit</H3>
+<p>L'idée principale du jeux est que vous, joueur, êtes des entraineurs-managers et que vos soucis
+ seront en rapport avec le carré vert. Le fonctionnement du jeux doit vous amener à vous poser les questions qu'un homme de terrain peut se poser et 
+ doit vous donner les moyens d'y répondre, sans vous enquiquiner avec des choix qui ne sont pas ceux que doit faire un technicien du football. De plus
+ on essayera de se rapprocher d'une gestion de football le plus proche possible de la réalité, dans le but de vous procurer des émotions semblables à 
+ celle d'un manager.</p>
+ <p>Premierement, <b>tous les choix que vous aurez à faire seront relatif au terrain : la sélection de votre onze pour le prochain match, 
+ le positionnement de vos joueurs sur le terrain</b>, l'entrainement, une part de la gestion des transfert et la vie du groupe. En tant qu'homme de terrain,
+ vous n'aurez que très peu d'impact sur le reste de la gestion de votre club de foot.</p>
+ <p>Deuxiement, vous n'aurez pas de choix à faire avec ce qui n'a pas de relation direct avec le terrain : la partie négociation des salaires et 
+ montant des transferts, l'aménagement d'un stade ou d'un centre d'entrainement, la gestion d'un budget, ... Vous aurez connaissance de ces facettes
+ de votre club, mais ce ne sont pas vos oignons. Vous serez informé par vos dirigeants de l'évolution de ces situations, parfois ils vous demanderont
+ votre avis, mais ce n'est pas là l'essentiel du job.</p>
+ <p>Troisiemement, les joueurs ne seront pas des tableaux de vingt caractéristiques. Il ne doit pas avoir beaucoup d'entraineur au monde qui soit capable
+  d'évaluer qu'un de ses joueurs a "16 à la tête", "18 en tackle", et qu'un autre  a "14 en  passe" et seulement "8 en technique", etc. et ceci sur plus de
+  vingt caractéristiques dont certaines sont cachées comme on le trouve dans le plus agréable de jeu de gestion footballistique. C'est certes très interressant
+  et très précis, mais on est, de mon point de vue, éloigné de la réalité. Chacun de vos joueurs aura également des caractérisitques (elles sont
+   détaillées dans la section <a href="#2.3">les joueurs</a>), mais elles ne seront pas nombreuses et elles seront représentées sous forme graphique 
+   et non chiffrées. Et comme une équipe est plus qu'une somme d'invidualité et de caractéristiques technique, physique et tactique, l'influence 
+   de la mentalité et du moral d'un joueur sur le groupe sera une composante importante à prendre en compte pour la sélection de votre équipe et la 
+   gestion de votre groupe. De plus, vos joueurs seront ce que vous en ferez. Ils n'auront pas de poste prédéfinis, mais seulement une capacité 
+   à se situer sur le terrain (voir la section <a href="#2.3">les joueurs</a>). De la même façon, il n'y aura pas de caractéristique spécifique pour les gardiens de but (ce qui
+   est discutable, j'en conviens), mais c'est à vous de déceler dans votre effectif, le ou les joueurs les plus capable de se situer pour défendre le but.</p>
+ <p>Enfin, la dernière idée directrice de la construction de ce jeux est qu'il se passe en temps réel simulé. Le temps s'écoule, plus rapidement 
+ que dans le monde réel, mais de façon continue au rythme d'une semaine de jeux en une journée au temps réel. Le but étant que vous puissiez interagir
+  avec votre équipe en temps réel. Dans le même ordre d'idée, à terme, vous pourrez assister aux matches en temps réels et y prendre part.</p>
+ <p>J'ai exposé ici, l'exprit du jeu tel qu'il a été pensé. Mais évidement tout ceci demande du travail et le jeu se construira petit à petit dans cette
+  direction, en tenant compte de vos retour et de vos attentes.</p>
+ 
+<H2 id="2">II. Le comment ça marche</H2>
+<p>Il est plus que temps d'expliciter comment cela ce joue-t-il ?</p>
+
+
+<H3 id="2.1">II.1. Principes généraux et organisation</H3>
+<p>Comme préciser précédement, le temps qui s'écoule dans le jeux est du temps réel simulé. C'est à dire qu'il y a une correspondance entre le temps 
+du monde réel et le temps du jeu. Une semaine de jeu est l'équivalent d'une journée en temps de réel. Chaque heure de temps réel est l'équivalent de 3h30 
+de temps jeux. Chaque journée en temps jeux est l'équivalent de 6h51min de temps réel. Le jeu se déroule de 3h à minuit. Les matchs se dérouleront le 
+samedi en temps jeux, c'est à dire en soirée dans la vraie vie.</p>
+<p>La fréquence des matchs sera de un match/jour.</p>
+<p>Il y a huit divisions : Nord, Nord-Est, Est, Sud-Est, Sud, Sud-Ouest, Ouest et Nord-Ouest. Chacune des divisions comporte 16 équipes. Le système de
+monter/descente entre les divisions n'est pas encore fixé. Il y aura surement des coupes inter-division et une coupe des champions...plus tard.</p>
+<p>La victoire raporte 3 points, le match nul 1 points et la défaire 0.</p>
+
+<H3 id="2.2">II.2. Les joueurs</H3>
+	<table>
+	<tr>
+	<td>
+	<%= image_tag "moral.png", :alt => "moral", :class => 'stats' %>
+	</td>
+	<td>
+	Le moral du joueur.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "condition.png", :alt => "condition", :class => 'stats' %>
+	</td>
+	<td>
+	La condition physique du joueur.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_xp.png", :alt => "xp", :class => 'stats' %>
+	</td>
+	<td>
+	L'experience emagasinée par le joueur. Influe sur la capacité de décision et sur l'influence du joueur.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_men2.png", :alt => "mental", :class => 'stats' %>
+	</td>
+	<td>
+	La mentalité du joueur. Capacité du joueur à être régulier, combatif et à s'adapter à un poste, une équipe, ...
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_tal2.png", :alt => "talent", :class => 'stats' %>
+	</td>
+	<td>
+	Le talent du joueur. Plus un joueur aura la capacité à faire la différence, plus il aura du talent. Mais un joueur sans talent, peut aussi être
+	important dans une équipe. Des joueurs plus besogneux sont importants pour une équipe. Attention aux starlettes du football avec une mentalité pourrie
+	et peu de talent.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_tac2.png", :alt => "tactique", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité tactique du joueur. Le jeu sans ballon en attaque et en défense. Ses choix avec le ballon. Capacité à se déplacer en fonction de la 
+	tactique décidée.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_tec2.png", :alt => "technique", :class => 'stats' %>
+	</td> 
+	<td>
+	Le joueur et le ballon. Qualité et facteur de réussite de tous les gestes, aussi bien défensif qu'offensif.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_for1.png",:alt => "force", :class => 'stats' %>
+	</td>
+	<td>
+	La force physique du joueur. Son impact dans les duels, sa force de frappe, son endurance, sa détente.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icon_vit2.gif", :alt => "vitesse", :class => 'stats' %>
+	</td>
+	<td>
+	La vitesse du joueur.
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icone_terrain_gch.png", :alt => "gauche", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité à jouer à gauche du terrain. 
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icone_terrain_ctr.png", :alt => "centre", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité à jouer au centre du terrain. 
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icone_terrain_drt.png", :alt => "droite", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité à jouer à droite du terrain. 
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icone_terrain_off.png", :alt => "offensif", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité à jouer en zone offensive. 
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= image_tag "icone_terrain_def.png", :alt => "defensif", :class => 'stats' %>
+	</td>
+	<td>
+	La capacité à jouer en zone défensive. 
+	</td>
+	</tr>
+	<tr>
+	<td>
+	</table>
+	
+<H3 id="2.3">II.3. Faire son équipe</H3>
+</p>De comment on sélectionne ses joueurs, les déplace, et valide sa sélection pour la prochaine journée.</p>
+
+<H4 id="2.3.1">II.3.1. Ajouter un joueur à la feuille de match</H4>
+<p>Pour ajouter un joueur à la feuille de match, cliquer sur la case à cocher dans la colonne <%= image_tag "icone_tactique.png", :alt => "tactique", :style => '  vertical-align:middle;' %> 
+sur la ligne du joueur.</p><p> Un rond de la couleur de votre club s'affiche sur le terrain avec le numéro du joueur. <%= image_tag "joueur.png", :alt => "joueur", :style => '  vertical-align:middle;' %> </p> 
+<p>Ce joueur s'affiche dans une position déterminé en fonction de ses capacités à joueur à droite, à gauche, au centre, en zone offensive ou défensive. 
+Vous avez le droit à 11 joueurs sur le terrain et 5 remplaçants.</p>
+
+<H4 id="2.3.2">II.3.2. Sélectionner et déplacer un joueur</h4>
+<p>Vous pouvez déplacer les joueurs sur le terrain où bon vous semble. En cliquant sur un des joueurs sur le terrain, vous le sélectionez et son rond s'encadre
+ en noir. <%= image_tag "selection.png", :alt => "slection", :style => '  vertical-align:middle;' %></p>
+ <p> Il se déplacera sur le terrain à l'endroit de votre prochain click sur le terrain.</p>
+<p>Si vous déplacez un joueur en dehors du terrain (derrière la ligne de but) à gauche, il devient remplaçant. Vous pouvez remettre un remplaçant dans
+le jeu en le replaçant sur le terrain.</p>
+<p><b>Attention, avant de changer d'écran, il faut valider votre tactique, sinon vous perdrez toutes vos modifications.</b></p>
+
+<h4 id="2.3.3">II.3.3. Enregistrer sa tactique</h4>
+<p>Pour enregistrer votre tactique pour le prochain match, cliquer sur le bouton "Valider" en dessous du terrain.<%= image_tag "valider.png", :alt => "valider", :style => '  vertical-align:middle;' %></p>
+<p>Ainsi, les joueurs et leurs positions
+ seront enregistrés. Tant que le match n'est pas joué, vous pouvez modifier votre tactique et la réenregistrer.</p>
+<p><b>Attention, avant de changer d'écran, il faut valider votre tactique, sinon vous perdrez toutes vos modifications.</b></p>
+
+<h4 id="2.4.3">II.3.4. Jour de match</h4>
+<p>Les jours de matchs, votre équipe sera complétée aléatoirement (jusqu'a onze joueurs), et enregistrée comme telle, avant que le match se joue.
+Les matchs se jouent tout les 3, 4 jours. Ils sont annoncés sur <a href="http://www.facebook.com/Howtomanagemyfootballteamcom">la page Facebook du site</a>. 
+Vous pouvez également visualisé la tactique de votre adversaire pour ce futur match en cliquant sur le "-" concernant ce match dans votre calendrier ou votre agenda.</p>
+
+<h3><a id="2.4">II.4. L'après match</a></h3>
+<p>Le match a été joué...reste à savoir si votre tactique a été plus performante que celle de l'adversaire...</p>
+
+<h4><a id="2.4.1">II.4.1. Les résultats</a></h4>
+<p>Les résultats de tous vos matchs son visible grâce à votre agenda sur la page principale de votre équipe dans la colone de droite. Pour consulter l'ensemble 
+des résultats d'une division, cliquez sur le nom de la division dans le classement.</p>
+
+<h4><a id="2.4.2">II.4.2. Les statisiques</a></h4>
+<p>Si vous cliquez sur le résutat d'un match vous accéderez à un écran d statistiques pour ce match. Vous pourrez ainsi vois l'affrontement tactique 
+du match et les différentes statistiques des joueurs afin d'afiner votre tactique.</p>
+
+
+<H2 id="3">III. Navigation</H2>
+<p>Si vous n'etes pas connecté, le formulaire de connexion ci-dessous s'affichera sous l'image titre.</p><BR/>
+<div style="margin-left:50px">
+<%= image_tag "accueil_deconnect_expli2.jpg", :alt => "ecran accueil deconnecté"%>
+
+<div style="float:right;margin-right:200px;">
+<ol align="left">
+<li>Lien pour l'inscription.</li>
+<li>Le pseudo.</li>
+<li>Le mot de passe.</li>
+<li>Se souvenir de moi ?.</li>
+<li>Le bouton de connexion.</li>
+<li>Lien vers cette page.</li>
+</ol>
+</div>
+</div>
+
+
+<H3 id="3.1">III.1. L'écran d'accueil</H3>
+<p>En arrivant sur ce site, vous devriez arrivé sur un page ressemblant à l'image ci-dessous. Si par aventure, le terrain du bas de l'écran ne s'affiche
+ pas, mettez à jour votre navigateur ou changez en, ou, le cas échéant changé de téléphone, d'i-bidule ou de tablette.</p>
+ <p>Si vous n'etes pas connecté, vous avez accés au détail d'un équipe "au hasard". Vous pouvez sélectionner des joueurs, les déplacez sur le terrain, ...
+ mais vous ne pourrez pas valider et enregistrer la tactique pour cette équipe "au hasard". Pour jouer, avoir votre équipe... enregistrez vous!.</p>
+ 
+<BR/>
+ 
+ <div style="margin-left:50px">
+<%= image_tag "accueil_connect_expli2.jpg", :alt => "ecran accueil connecté"%>
+<div style="float:right;margin-right:80px;">
+<ol align="left">
+<li>Le nom de l'équipe (liens vers le détail du club).</li>
+<li>Le pseudo (liens vers le détail du joueur humain).</li>
+<li>Lien vers la page de rapport (bug, livre d'or et discussion).</li>
+<li>Lien vers cette page.</li>
+<li>Liens de déconnexion.</li>
+<li>Le nom de la division et le classement. <br/>Cliquez sur un nom d'équipe pour en voir le détail.</li>
+<li>La colonne qui permet d'ajouter un joueur à la feuille de match.</li>
+<li>Le terrain</li>
+<li>La partie de terrain où on "range" les remplaçants.</li>
+<li>Des joueurs sur un terrain... impressionnant, non ?</li>
+<li>Le bouton qui valide et enregistre la tactique.</li>
+</ol>
+</div>
+</div>
+<div style="margin-left:50px">
+(écran une fois connecté)
+</div>
+<BR/>
+
+
+
+<H3 id="3.2">III.2. Inscription</h3>
+<p>Pour vous inscrire et devenir manager d'une nouvelle équipe, il vous faut cliquer sur le liens "Register" (1).Vous serez dirigé vers la page suivante.</p>
+<%= image_tag "inscription.png", :alt => "inscription"%>
+<p>Il vous est demandé de compléter votre pseudo, votre email et votre password. Puis choississez une équipe parmis celle disponibles. Il y a huit 
+divisions et seize équipes dans chacune des divisions. Enfin validez, et l'aventure d'entraineur commence.</p>
+
+<H3 id="3.3">III.3. Connexion</h3>
+<p>Vous connectez ? Utilisez le formulaire de la page d'accueil!</p>
+
+<H3 id="3.4">III.4. Les autres pages</h3>
+<p>Un certain nombre d'écran sont disponibles, je vous les présente succintement :
+<ul>
+<li>Détail d'un joueur : en cliquant sur le nom d'un joueur vous obtenez le détail des caractéristique du joueur.</li>
+<li>Détail d'une autre équipe : en cliquant sur le nom d'une équipe dans le classement, vous accédez au détail des joueurs de cette équipe, puis aux détails
+ des joueurs de cette équipe</li>
+<li>Détail d'un club : en cliquant sur le nom de l'équipe dans la partie liste des joueurs, vous accédez aux détails du club.</li>
+<li>Détail d'un joueur (humain qui joue) : en cliquant sur votre pseudo, vous accédez à 2, 3 trucs vous concernant.</li>
+<li>Divisions et Joueurs : en cliquant sur le nom de votre division, vous accédez à la liste des joueurs "humain" par divisions.</li>
+<li>Page de rapport : en cliquant sur l' "*" dans le menu, vous accédez à une page où vous pouvez signaler des bugs et laisser vos impressions et envies.</li>
+<li>Annuaire : en cliquant sur l' "@" dans le menu, vous accédez à une liste de tous les joueurs de toutes les divisions ainsi qu'à leur emails.</li>
+<li>Statistiques et tactiques du prochain match : en cliquant sur le score d'un match ou le "-" concernant ce match dans votre calendrier ou votre agenda.</li>
+<li>Résultats d'une division : en cliquant sur le nom d'une division dans le calendrier, vous accédez à tous les résultats pour toute les journées de cette division.</li>
+<li>Cette page : en cliquant sur le "?", vous arrivez ici.</li>
+</ul>
+</p>
+
+
+<H2 id="4">IV. FAQ</H2>
+<H3 id="4.1">IV.1. C'est qui le responsable</H3>
+<p>héhé, c'est moi! :o). Jérôme Pierson, un passioné de football et joueur de Football Manager depuis le début (même si je joue beaucoup moins maintenant)
+ et informaticien également. J'ai ce projet dans mes cartons depuis une petite dizaine d'années. Au cas où, je veux bien un coup de main, je cherche, à première vue, 
+ un graphiste et vous comprendrez tous pourquoi, un codeur Rails ou Javascript, et des traducteurs pour cette page dans toutes les langues. Pour tout commentaires et contact : <%= mail_to "webmaster@howtomanagemyfootballteam.com", nil, :replace_at => "_at_", :replace_dot => "_dot_" %></p>
+
+<H3 id="4.2">IV.2. Comment sont "calculés" les matchs</H3>
+<p>Pour faire court, mais pour vous donner une idée de comment concevoir votre tactique, voilà le calcul des matchs : on suppose que tout part du milieu du terrain. 
+Le terrain est divisé en trois zone : couloir gauche, axe central et couloir droit. On calcul un nombre de ballon à jouer pour le match. Ces ballons
+sont "mis en jeu" au milieu du terrain. On calcul pour chaque équipe une probabiblité de récupération des ballons et une probabilité de conservation 
+du ballon pour chaque équipe pour le couloir gauche, le couloir droit et la zone centrale du terrain. Chaque joueur a une influence
+sur ces probabilités (gauche, droit et centre) en fonction de sa position et de ses caractéristiques. En comparant ces deux probabilités, on obtient 
+ainsi un nombre de ballons joués pour chaque équipe au centre du terrain et de la même façon pour chacun des couloirs. Ces ballons sont redistribués 
+dans toutes les zones, et le même calcul est effectué avec des probabilités de progression et de récupération en zone défensive, puis on confronte 
+des probabilités de déséquilibre à des probabilités de défense pour enfin arrivé à un nombre de tir au but par équipe et par zone. On compare des
+probabilités de finition à la probabilités du gardien de but (le joueur le plus en retrait) pour avoir le nombre de but par équipe.</p>
+
+<H3 id="4.3">IV.3. C'est au pif ton truc là ?</H3>
+<p>Absolument pas... ou en pas complétement. Il y a un petit peu d'aléatoire dans tous les calculs, mais le résultats des matchs n'est pas au pif!</p>
+
+<H3 id="4.4">IV.4. C'est où les transferts ?</H3>
+<p>Ce n'est tout simplement pas encore fait. Une fois que la version 1.0 sera finalisée, on ajoutera les transferts, l'entrainement, la fatigue des joueurs et d'autres trucs vachement bien.</p>
+
+<H3 id="4.5">IV.5. Il n'y a pas de statistiques de gardien ?</H3>
+<p>Non, il n'y a pas de statistiques spécifiques pour les gardiens de but et c'est un parti pris ... qui est discutable mais c'est comme ça. Le gardien
+de but est un joueur de foot presque comme les autres, avec son sens tactique, sa technique de pieds et mains et il se place généralement dans l'axe du terrain
+et en zone défensive.</p>
+
+<H2 id="5">V. Remerciements</H2>
+Merci à tous ceux qui ont contribué de prêt ou de loin à l'évoution de ce site : Aurelien, Yoann, Yannick, Pierre, Heïdi, ainsi que tous les autres bếta-testeurs.
+
+<H2 id="6">VI. Les TODO</H2>
+<p>
+Listons les futures étapes du devellopement du jeu.
+<ul>
+<li>Prendre en compte la fatigue des joueurs à la fin des matchs (V 1)</li>
+<li>Les entrainements (v 1.5)</li>
+<li>Les transferts (v 2)</li>
+<li>les stats d'un joueur (v 1.5)</li>
+<li>Améliorer les placements des joueurs 
+	<ul>
+	<li>une position pour les 12 positions du ballon offensif (v 1.5)</li>
+	<li>une positions pour les 12 positions du ballon défensif (v 1.5)</li>
+	<li>un rectangle d'action du joueur (v 2)</li>
+	</ul>
+<li>Les causeries (v 2.5)</li>
+<li>Une animation pour le déroulement des matchs (v 2)</li>
+<li>Amélioration de l'algo de résolution des matchs (ongoing work)</li>
+<li>Pouvoir avoir des joueurs directeur, coach adjoint, etc.. (v 46)</li> 
+</ul>
+</p>

@@ -1,0 +1,126 @@
+<div id="menu">
+			<ul id="onglets">
+			<li id ="icon_terrain"><%= link_to (image_tag 'icone_terrain.png'), '/' %></li>
+
+<%if not current_user %>		
+			<li ><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %> / Démo</H1></li>
+			<li><H1><a href="">Transferts</a></H1> (non disponible en démo)</li>
+			<li><H1><a href="">Entrainement</a></H1> (non disponible en démo)</li>
+<% else %>
+		<% if @login.empty?  %>
+			<li><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %></H1></li>				
+		<% else %>		
+			<li><H1><%= link_to @club.equipe.nom, :controller=>'clubs', :action=>'show', :id=>@club.equipe.id %></H1></li>
+		<% end %>
+		<% if current_team  == params[:id].to_i || request.path == '/' || request.path == "/mon_equipe" %>
+			<li class="active"><H1><%= link_to 'Transferts', :controller=>'transferts', :action=>'show', :id=>@club.equipe.id %></H1></li>
+			<li><H1><%= link_to 'Entrainement', :controller=>'entrainements', :action=>'show', :id=>@club.equipe.id %></H1></li>
+		<% else %>
+			<li><H1>Transferts</H1> (non disponible)</li>
+			<li><H1>Entrainement</H1> (non disponible)</li>
+		<% end %>	
+		 
+		
+<% end %>
+  </ul>
+</div>		
+<div class = "equipe">
+<div id="top">
+			<p>Renforcer son équipe, oui mais... à quel prix ?</p>
+			<p>Il n'y a pour l'instant pas de système monétaire dans le jeu, les transferts se feront sous forme de <strong>troc</strong>... à l'ancienne</p>
+			<p>Vous pouvez acheter un joueur soit à une autre équipe, soit parmis les joueurs libres (sans club). Acheter un joueur vous coutera un 
+			minimum de <strong>2 joueurs de votre équipe</strong>. Pour les joueurs libres, c'est le tarif : 1 joueur contre 2 joueurs de votre équipe. Pour dealer avec les autres
+			joueurs, libre à vous de proposer plus de 2 joueurs de votre équipe (mais moins de 6) pour convaincre l'autre joueur d'accepter l'échange. Vous receverez par mail les 
+			propositions d'échanges.</p>
+			<p>Par jour (en temps de jeu), vous ne pouvez faire qu'une proposition pour un joueur libre, et qu'une proposition par équipe pour des joueurs 
+			d'autres équipes. Vous êtes également limités à 2 joueurs achetés à une même équipe par saison.</p>
+		</div>
+		
+<div>
+<table class="liste_joueur" border="0" ALIGN="center" VALIGN ="MIDDLE">
+<tr>
+<th class="stats">
+#
+</th>
+
+<th >
+</th>
+<th >
+</th>
+<th class="stats">
+<%= image_tag "moral.png", :alt => "moral",:title=>"moral", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "condition.png", :alt => "condition",:title=>"condition", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_gch.png", :alt => "gauche",:title=>"couloir gauche", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_ctr.png", :alt => "centre",:title=>"zone axiale", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_drt.png", :alt => "droite",:title=>"couloir droit", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_off.png", :alt => "offensif",:title=>"zone offensive", :class => 'stats' %>
+</th>
+<th class="stats">
+<%= image_tag "icone_terrain_def.png", :alt => "defensif",:title=>"zone défensive", :class => 'stats' %>
+</th>
+<th class="stats">
+____<BR>Note
+</th>
+<th class="stats" width=40px; >
+Note<BR/>
+</th>
+<th class="stats">
+Mchs</th>
+<th class="stats">
+Vendre</th>
+</tr>
+<% i=1 %>
+<% @joueurs.each do |joueur| %>
+
+
+<% if (i % 2 == 1) %>
+<% @classe = "equipe_impaire" %>
+<% else %>
+<% @classe = "equipe_paire" %>
+<% end %>
+<tr class ="<%= @classe %>" id="tr_<%= joueur.id%>">
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" > <%= joueur.numero %></td>
+
+
+<td nowrap ALIGN="left" VALIGN ="MIDDLE"  ><%= link_to joueur.nom + ' ' + joueur.prenom, joueur %> </td>
+<td nowrap ALIGN="center" VALIGN ="MIDDLE" > <%= joueur.age %> ans </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.moral %>%"></div><div class="barfiller" style="left:<%= 100-joueur.moral %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.cond %>%"></div><div class="barfiller" style="left:<%= 100-joueur.cond %>%"></div> </td>
+
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.gch %>%"></div><div class="barfiller" style="left:<%= 100-joueur.gch %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.ctr %>%"></div><div class="barfiller" style="left:<%= 100-joueur.ctr %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.drt %>%"></div><div class="barfiller" style="left:<%= 100-joueur.drt %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.off %>%"></div><div class="barfiller" style="left:<%= 100-joueur.off %>%"></div> </td>
+<td class="graph" ALIGN="left" VALIGN ="MIDDLE"><div class="bar" style="width:<%= joueur.def %>%"></div><div class="barfiller" style="left:<%= 100-joueur.def %>%"></div> </td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.avgnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.lastnote%></td>
+<td ALIGN="CENTER" VALIGN ="MIDDLE" ><%=joueur.nbmatch%></td>
+<td>
+		<%= check_box_tag('chk_joueur', joueur.id, false)%>
+
+</td>
+
+</tr>
+<% i = i + 1 %>
+<% end %>
+</table>
+
+
+</div>
+<div align="center" style="padding : 30px;">	
+<H2 style="float:left;">Transfert avec : </H2><%= select_tag "club_id", options_from_collection_for_select(@liste_club, "id", "equipe"), :prompt => "Choisir un transfert avec...", :onchange => "update_transfert_div(this.value)" %>
+</div>
+<div id="liste_joueurs">
+</div>
+</div>
+

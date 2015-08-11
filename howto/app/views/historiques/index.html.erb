@@ -1,0 +1,18 @@
+<h1>Listing historiques</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for historique in @historiques %>
+  <tr>
+    <td><%= link_to 'Show', historique %></td>
+    <td><%= link_to 'Edit', edit_historique_path(historique) %></td>
+    <td><%= link_to 'Destroy', historique, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New historique', new_historique_path %>

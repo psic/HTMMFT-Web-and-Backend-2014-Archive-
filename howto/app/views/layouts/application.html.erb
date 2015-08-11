@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+    <title><%= title %></title>
+    <meta name="description" content="HowToManageMyFootballTeam is a free online football (soccer) manager game." />
+	<meta name="keywords" content="Football Manager, Online Football Manager, Free Football Manager, Soccer Manager, Football, Soccer, Online Football Manager Game, Football Club, Football Community" />
+    <%= csrf_meta_tag %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <%= stylesheet_link_tag 'normal', :media => 'screen' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22341697-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+<body>
+<div class="header">
+<h1><%= link_to 'How to manage my football team ', '/' %><%= link_to '?', {:controller=>'howto'}, {:class =>"interro"} %></h1>
+<h2><%= link_to '"Make it smart, keep it simple!"', {:controller=>'howto'} %></h2>
+
+
+</div>
+<div class="container">
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+</div>
+<div class="footer">
+</div>
+</body>
+</html>

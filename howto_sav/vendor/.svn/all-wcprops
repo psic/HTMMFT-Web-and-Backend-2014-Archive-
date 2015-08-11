@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor
+END
+activeresource
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/activeresource
+END
+actionmailer
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/actionmailer
+END
+activesupport
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/activesupport
+END
+activerecord
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/activerecord
+END
+rails
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/rails
+END
+actionpack
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/actionpack
+END
+activemodel
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/activemodel
+END
+railties
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/howtomanagemyfootballteam_howto/!svn/ver/9/howto/vendor/railties
+END

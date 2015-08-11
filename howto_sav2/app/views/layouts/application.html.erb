@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title><%= title %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %> 
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <%= stylesheet_link_tag 'normal', :media => 'screen' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  </head>
+<body>
+<div class="header">
+<h1>How to manage my football team ?<h1> <BR>
+
+<h2>"Keep it simple, make it smart!"<h2>
+
+
+</div>
+<div class="container">
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+</div>
+<div class="footer">
+</div>
+</body>
+</html>
